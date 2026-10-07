@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bato Update — Nepal road status</title>
+<meta name="description" content="Is the road open? Live road status for Nepal's highways — open, one-way, or blocked, with reasons and alternatives.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0e7a3d">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">🛣️</span><span id="app-name">Bato Update</span></div>
+  <div class="topbar-right"><span id="data-age" class="data-age"></span></div>
+</header>
+
+<div id="offline-banner" class="offline-banner" hidden>📡 Offline — showing last-known data</div>
+
+<main id="view" class="view"></main>
+
+<nav class="tabbar">
+  <a href="#/" data-tab="home">🏠<span>Home</span></a>
+  <a href="#/trip" data-tab="trip">🧭<span>Trip</span></a>
+  <a href="#/about" data-tab="about">ℹ️<span>About</span></a>
+</nav>
+
+<footer class="appfooter">
+  <span id="app-version">v1 • 2026-10-07</span>
+  <span class="dot">•</span>
+  <span>Seed data 2026-10-06/07 — check source links before you travel</span>
+</footer>
+
+<script src="js/navigate.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
