@@ -1,1 +1,31 @@
-{"background_color":"#0e7a3d","description":"Is the road open? Live road status for Nepal's highways — open, one-way, or blocked, with reasons and alternatives.","display":"standalone","icons":[{"purpose":"any","sizes":"any","src":"icons/icon.svg","type":"image/svg+xml"},{"purpose":"any","sizes":"192x192","src":"icons/icon-192.png","type":"image/png"},{"purpose":"any maskable","sizes":"512x512","src":"icons/icon-512.png","type":"image/png"}],"name":"Bato Update — Nepal Road Status","orientation":"portrait","scope":".","short_name":"Bato Update","start_url":".","theme_color":"#0e7a3d"}
+{
+"background_color": "#06331d",
+"description": "Is the road open? Live road status for Nepal's highways \u2014 open, one-way, or blocked, with reasons and alternatives.",
+"display": "standalone",
+"icons": [
+{
+"purpose": "any",
+"sizes": "any",
+"src": "icons/icon.svg",
+"type": "image/svg+xml"
+},
+{
+"purpose": "any",
+"sizes": "192x192",
+"src": "icons/icon-192.png",
+"type": "image/png"
+},
+{
+"purpose": "any maskable",
+"sizes": "512x512",
+"src": "icons/icon-512.png",
+"type": "image/png"
+}
+],
+"name": "Bato Update \u2014 Nepal Road Status",
+"orientation": "portrait",
+"scope": ".",
+"short_name": "Bato Update",
+"start_url": ".",
+"theme_color": "#06331d"
+}

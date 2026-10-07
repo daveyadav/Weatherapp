@@ -1,9 +1,9 @@
-/* Bato Update service worker — v2.
+/* Bato Update service worker — v3.
  * Cache the app shell + corridor data on install. Offline: serve from cache and the
  * app shows its "offline — showing last-known data" banner. Bump CACHE when the
  * shell changes (keep in sync with APP_VERSION in js/app.js).
  */
-const CACHE = "bato-update-v2";
+const CACHE = "bato-update-v3";
 const SHELL = [
   "./",
   "./index.html",

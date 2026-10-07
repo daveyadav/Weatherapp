@@ -7,7 +7,7 @@
  * route graph so From -> To works across multiple corridors.
  */
 const APP_NAME = "Bato Update";
-const APP_VERSION = "v2 • 2026-10-07";
+const APP_VERSION = "v3 • 2026-10-07";
 
 const STATUS_META = {
   OPEN:    { label: "Open",    np: "खुला",    cls: "open" },
@@ -54,6 +54,17 @@ function ageLabel(iso) {
 
 function isStale(iso) {
   return ageMs(iso) > STALE_MS;
+}
+
+/* Compact age for the hero stat ("2h", "45m", "3d"). */
+function shortAge(iso) {
+  const ms = ageMs(iso);
+  if (!isFinite(ms)) return "—";
+  const m = Math.floor(ms / 60000);
+  if (m < 60) return m + "m";
+  const h = Math.floor(m / 60);
+  if (h < 24) return h + "h";
+  return Math.floor(h / 24) + "d";
 }
 
 /* A stale status is displayed as UNKNOWN-grey ("possibly outdated") — never green. */
@@ -267,7 +278,7 @@ function homeListHTML() {
     .map((c) => {
       const v = corridorVerdict(c);
       const f = freshestSeg(c);
-      return `<a class="card card-link" href="#/c/${c.id}">
+      return `<a class="card card-link st-${v.status.toLowerCase()}" href="#/c/${c.id}">
         <div class="corridor-head">
           <div><span class="corridor-name">${esc(c.name)}</span>${c.ref ? `<span class="corridor-code">${esc(c.ref)}</span>` : ""}</div>
           ${chip(v.status, { updated_at: f.updated_at })}
@@ -283,11 +294,27 @@ function homeListHTML() {
 }
 
 function viewHome() {
-  const alertCount = DATA.corridors.filter(
-    (c) => corridorVerdict(c).status !== "OPEN"
-  ).length;
+  let openCount = 0,
+    alertCount = 0;
+  DATA.corridors.forEach((c) => {
+    if (corridorVerdict(c).status === "OPEN") openCount++;
+    else alertCount++;
+  });
+  const newest = DATA.corridors
+    .flatMap((c) => c.segments)
+    .reduce((a, s) => (ageMs(s.updated_at) < ageMs(a.updated_at) ? s : a));
   return `${feedBanner()}
-  <h2>🇳🇵 Nepal road status</h2>
+  <section class="hero">
+    <div class="hero-kicker">🇳🇵 Live · DoR feed</div>
+    <h2>Is the road open?</h2>
+    <p class="hero-sub">Every national highway of Nepal — segment by segment, with what you'll actually face on the way.</p>
+    <div class="hero-stats">
+      <div class="hstat"><b>${openCount}</b><span>Open</span></div>
+      <div class="hstat hstat-warn"><b>${alertCount}</b><span>With alerts</span></div>
+      <div class="hstat"><b>${esc(shortAge(newest.updated_at))}</b><span>Data age</span></div>
+    </div>
+    <div class="hero-road" aria-hidden="true"></div>
+  </section>
   <input id="q" class="searchbar" type="search" placeholder="Search highway, code (NH17), or place…" value="${esc(HOME_QUERY)}" aria-label="Search corridors" autocomplete="off">
   <div class="fchips">
     <button class="fchip${HOME_FILTER === "all" ? " active" : ""}" data-f="all">All</button>
@@ -339,11 +366,24 @@ function renderTripResult(from, to) {
           (n, cid) => n + ((corridorById(cid) || { segments: [] }).segments.length),
           0
         );
-        return `<div class="card trip-opt">
-          <div class="verdict"><span class="opt-label">Option ${i + 1}</span>${chip(v.status, v.decider || { updated_at: new Date().toISOString() })}</div>
-          <div class="small">${esc(names)}</div>
-          <div class="small">${segCount} segments on this journey</div>
-          ${v.decider ? `<div class="decider">⚠️ Watch out: <b>${esc(v.decider.name)}</b>${v.deciderCorridor ? " (" + esc(v.deciderCorridor.name) + ")" : ""}</div>` : `<div class="decider">✅ No reported problems on this option.</div>`}
+        const dots = legs
+          .flatMap((cid) => ((corridorById(cid) || {}).segments || []))
+          .map(
+            (s) =>
+              `<span class="seg-dot seg-dot-${displayStatus(s)}" title="${esc(s.name)}"></span>`
+          )
+          .join("");
+        return `<div class="card trip-opt st-${v.status.toLowerCase()}">
+          <div class="verdict">
+            <span class="opt-badge">${i + 1}</span>
+            <div class="verdict-main">
+              <div class="opt-label">Option ${i + 1}</div>
+              <div class="small">${esc(names)} · ${segCount} segments</div>
+            </div>
+            ${chip(v.status, v.decider || { updated_at: new Date().toISOString() })}
+          </div>
+          <div class="seg-strip" aria-hidden="true">${dots}</div>
+          ${v.decider ? `<div class="decider">⚠️ Watch out: <b>${esc(v.decider.name)}</b>${v.deciderCorridor ? " (" + esc(v.deciderCorridor.name) + ")" : ""}</div>` : `<div class="decider decider-ok">✅ No reported problems on this option.</div>`}
           <h3>Journey timeline</h3>
           ${tripTimelineHTML(legs)}
         </div>`;
@@ -421,7 +461,7 @@ function viewCorridor(id) {
     .join("");
   return `${feedBanner()}
   <p><a href="#/">← All highways</a></p>
-  <div class="card">
+  <div class="card detail-head st-${v.status.toLowerCase()}">
     <div class="corridor-head">
       <div><span class="corridor-name">${esc(c.name)}</span>${c.ref ? `<span class="corridor-code">${esc(c.ref)}</span>` : ""}${c.name_np ? `<div class="small">${esc(c.name_np)}</div>` : ""}</div>
       ${chip(v.status, { updated_at: f.updated_at })}
@@ -522,7 +562,7 @@ async function boot() {
   document.getElementById("app-version").textContent = APP_VERSION;
   document.title = APP_NAME + " — Nepal road status";
   const view = document.getElementById("view");
-  view.innerHTML = `<div class="center"><div class="spinner">🛣️</div><p>Loading road data…</p></div>`;
+  view.innerHTML = `<div aria-hidden="true"><div class="skel skel-hero"></div><div class="skel skel-line"></div><div class="skel skel-card"></div><div class="skel skel-card"></div></div><p class="center small">Loading road data…</p>`;
   try {
     await loadData();
   } catch (e) {
