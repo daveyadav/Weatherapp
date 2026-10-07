@@ -1,0 +1,5422 @@
+{
+ "generated_at": "2026-10-07T16:09:02+05:45",
+ "app": "Bato Update v2",
+ "road_list_source": "DoR NAVIGATE Metadata_api/getAllRoads (fetched 2026-10-07)",
+ "status_key": [
+  "OPEN",
+  "ONE_WAY",
+  "PARTIAL",
+  "CLOSED",
+  "UNKNOWN"
+ ],
+ "seed_note": "Seed statuses are UNKNOWN — the live DoR feed fills them at runtime. Travel notes marked verified:true are grounded in 2026-10-07 news research; verified:false entries rely on the live feed. Data older than 24h renders grey.",
+ "places": [
+  {
+   "id": "aanbukhaireni",
+   "name": "Aanbukhaireni"
+  },
+  {
+   "id": "aarughat",
+   "name": "Aarughat"
+  },
+  {
+   "id": "akraharghat",
+   "name": "Akraharghat"
+  },
+  {
+   "id": "ameliya",
+   "name": "Ameliya"
+  },
+  {
+   "id": "arungkhola",
+   "name": "Arung Khola"
+  },
+  {
+   "id": "baddichaur",
+   "name": "Baddichaur"
+  },
+  {
+   "id": "baglung",
+   "name": "Baglung"
+  },
+  {
+   "id": "bahundangi",
+   "name": "Bahundangi"
+  },
+  {
+   "id": "bajhang",
+   "name": "Bajhang (Chainpur)"
+  },
+  {
+   "id": "balaju",
+   "name": "Balaju (Kathmandu)"
+  },
+  {
+   "id": "balewa",
+   "name": "Balewa"
+  },
+  {
+   "id": "balkot",
+   "name": "Balkot"
+  },
+  {
+   "id": "barabise",
+   "name": "Barabise"
+  },
+  {
+   "id": "bardibas",
+   "name": "Bardibas"
+  },
+  {
+   "id": "bartung",
+   "name": "Bartung"
+  },
+  {
+   "id": "bastipurchowk",
+   "name": "Bastipurchowk (Siraha)"
+  },
+  {
+   "id": "bayalpata",
+   "name": "Bayalpata"
+  },
+  {
+   "id": "belahiya",
+   "name": "Belahiya"
+  },
+  {
+   "id": "besisahar",
+   "name": "Besisahar"
+  },
+  {
+   "id": "betrawati",
+   "name": "Betrawati"
+  },
+  {
+   "id": "bhadrapur",
+   "name": "Bhadrapur"
+  },
+  {
+   "id": "bhairahawa",
+   "name": "Bhairahawa"
+  },
+  {
+   "id": "bhaise",
+   "name": "Bhaise"
+  },
+  {
+   "id": "bhalubang",
+   "name": "Bhalubang"
+  },
+  {
+   "id": "bharatpur",
+   "name": "Bharatpur"
+  },
+  {
+   "id": "bhimad",
+   "name": "Bhimad"
+  },
+  {
+   "id": "bhimdatta",
+   "name": "Bhimdatta"
+  },
+  {
+   "id": "bhimphedi",
+   "name": "Bhimphedi"
+  },
+  {
+   "id": "bhittamod",
+   "name": "Bhittamod"
+  },
+  {
+   "id": "bhojpur",
+   "name": "Bhojpur"
+  },
+  {
+   "id": "bhumahi",
+   "name": "Bhumahi"
+  },
+  {
+   "id": "bhurigaun",
+   "name": "Bhurigaun"
+  },
+  {
+   "id": "bidur",
+   "name": "Bidur"
+  },
+  {
+   "id": "biratnagar",
+   "name": "Biratnagar"
+  },
+  {
+   "id": "birtamod",
+   "name": "Birtamod"
+  },
+  {
+   "id": "bohoratar",
+   "name": "Bohoratar"
+  },
+  {
+   "id": "bramhadev",
+   "name": "Bramhadev"
+  },
+  {
+   "id": "budar",
+   "name": "Budar"
+  },
+  {
+   "id": "burtibang",
+   "name": "Burtibang"
+  },
+  {
+   "id": "butwal",
+   "name": "Butwal"
+  },
+  {
+   "id": "chame",
+   "name": "Chame"
+  },
+  {
+   "id": "chandani",
+   "name": "Chandani"
+  },
+  {
+   "id": "chandragadhi",
+   "name": "Chandragadhi"
+  },
+  {
+   "id": "chandranigahpur",
+   "name": "Chandranigahpur"
+  },
+  {
+   "id": "chapakot",
+   "name": "Chapakot"
+  },
+  {
+   "id": "charikot",
+   "name": "Charikot"
+  },
+  {
+   "id": "chatara",
+   "name": "Chatara"
+  },
+  {
+   "id": "chaurjahari",
+   "name": "Chaurjahari"
+  },
+  {
+   "id": "chautara",
+   "name": "Chautara"
+  },
+  {
+   "id": "chinchu",
+   "name": "Chinchu"
+  },
+  {
+   "id": "chiyobhanjyang",
+   "name": "Chiyo Bhanjyang"
+  },
+  {
+   "id": "dahaltar",
+   "name": "Dahaltar"
+  },
+  {
+   "id": "dailekh",
+   "name": "Dailekh"
+  },
+  {
+   "id": "dakshinkali",
+   "name": "Dakshinkali"
+  },
+  {
+   "id": "damak",
+   "name": "Damak"
+  },
+  {
+   "id": "darbot",
+   "name": "Darbot"
+  },
+  {
+   "id": "darchula",
+   "name": "Darchula"
+  },
+  {
+   "id": "deurali",
+   "name": "Deurali"
+  },
+  {
+   "id": "devisthan",
+   "name": "Devisthan"
+  },
+  {
+   "id": "dhading",
+   "name": "Dhading Besi"
+  },
+  {
+   "id": "dhalkebar",
+   "name": "Dhalkebar"
+  },
+  {
+   "id": "dhangadhi",
+   "name": "Dhangadhi"
+  },
+  {
+   "id": "dhankuta",
+   "name": "Dhankuta"
+  },
+  {
+   "id": "dhanushadham",
+   "name": "Dhanushadham"
+  },
+  {
+   "id": "dharan",
+   "name": "Dharan"
+  },
+  {
+   "id": "dharke",
+   "name": "Dharke"
+  },
+  {
+   "id": "dho",
+   "name": "Dho"
+  },
+  {
+   "id": "dhorpatan",
+   "name": "Dhorpatan"
+  },
+  {
+   "id": "dhulikhel",
+   "name": "Dhulikhel"
+  },
+  {
+   "id": "dhunche",
+   "name": "Dhunche"
+  },
+  {
+   "id": "diktel",
+   "name": "Diktel"
+  },
+  {
+   "id": "dipayal",
+   "name": "Dipayal"
+  },
+  {
+   "id": "dodhara",
+   "name": "Dodhara (Kanchanpur)"
+  },
+  {
+   "id": "dolalghat",
+   "name": "Dolalghat"
+  },
+  {
+   "id": "dolpa",
+   "name": "Dolpa"
+  },
+  {
+   "id": "dudhauli",
+   "name": "Dudhauli"
+  },
+  {
+   "id": "dullu",
+   "name": "Dullu"
+  },
+  {
+   "id": "dumkibas",
+   "name": "Dumkibas"
+  },
+  {
+   "id": "dumre",
+   "name": "Dumre"
+  },
+  {
+   "id": "dunai",
+   "name": "Dunai"
+  },
+  {
+   "id": "ekantakuna",
+   "name": "Ekantakuna (Lalitpur)"
+  },
+  {
+   "id": "gaddachauki",
+   "name": "Gaddachauki"
+  },
+  {
+   "id": "gaidakot",
+   "name": "Gaidakot"
+  },
+  {
+   "id": "galchhi",
+   "name": "Galchhi"
+  },
+  {
+   "id": "gamgadhi",
+   "name": "Gamgadhi"
+  },
+  {
+   "id": "ganeshchok",
+   "name": "Ganeshchok"
+  },
+  {
+   "id": "gaur",
+   "name": "Gaur"
+  },
+  {
+   "id": "ghaighat",
+   "name": "Ghaighat"
+  },
+  {
+   "id": "ghorahi",
+   "name": "Ghorahi"
+  },
+  {
+   "id": "ghurmi",
+   "name": "Ghurmi"
+  },
+  {
+   "id": "godar",
+   "name": "Godar"
+  },
+  {
+   "id": "gorkha",
+   "name": "Gorkha"
+  },
+  {
+   "id": "gorusinge",
+   "name": "Gorusinge"
+  },
+  {
+   "id": "gulariya",
+   "name": "Gulariya"
+  },
+  {
+   "id": "gwarko",
+   "name": "Gwarko (Lalitpur)"
+  },
+  {
+   "id": "hanshpur",
+   "name": "Hanshpur"
+  },
+  {
+   "id": "hetauda",
+   "name": "Hetauda"
+  },
+  {
+   "id": "hile",
+   "name": "Hile"
+  },
+  {
+   "id": "hilsa",
+   "name": "Hilsa"
+  },
+  {
+   "id": "holeri",
+   "name": "Holeri"
+  },
+  {
+   "id": "ilas",
+   "name": "Ilam"
+  },
+  {
+   "id": "itahari",
+   "name": "Itahari"
+  },
+  {
+   "id": "jagatbhanjyang",
+   "name": "Jagat Bhanjyang"
+  },
+  {
+   "id": "jajarkot",
+   "name": "Jajarkot"
+  },
+  {
+   "id": "jaleswor",
+   "name": "Jaleshwor"
+  },
+  {
+   "id": "jamunaha",
+   "name": "Jamunaha"
+  },
+  {
+   "id": "jamunibas",
+   "name": "Jamunibas"
+  },
+  {
+   "id": "janakpur",
+   "name": "Janakpur"
+  },
+  {
+   "id": "jhulaghat",
+   "name": "Jhulaghat"
+  },
+  {
+   "id": "jitpur",
+   "name": "Jitpur"
+  },
+  {
+   "id": "jogbudha",
+   "name": "Jogbudha"
+  },
+  {
+   "id": "jumla",
+   "name": "Jumla"
+  },
+  {
+   "id": "kakarbhitta",
+   "name": "Kakarbhitta"
+  },
+  {
+   "id": "kakarhawa",
+   "name": "Kakarhawa"
+  },
+  {
+   "id": "kalaiya",
+   "name": "Kalaiya"
+  },
+  {
+   "id": "kalapani",
+   "name": "Kalapani"
+  },
+  {
+   "id": "kanchanban",
+   "name": "Kanchanban"
+  },
+  {
+   "id": "katari",
+   "name": "Katari"
+  },
+  {
+   "id": "kathmandu",
+   "name": "Kathmandu"
+  },
+  {
+   "id": "kawasoti",
+   "name": "Kawasoti"
+  },
+  {
+   "id": "kechana",
+   "name": "Kechana"
+  },
+  {
+   "id": "khadichaur",
+   "name": "Khadichaur"
+  },
+  {
+   "id": "khairenitar",
+   "name": "Khairenitar"
+  },
+  {
+   "id": "khakraula",
+   "name": "Khakraula"
+  },
+  {
+   "id": "khandbari",
+   "name": "Khandbari"
+  },
+  {
+   "id": "kharwang",
+   "name": "Kharwang"
+  },
+  {
+   "id": "khodpe",
+   "name": "Khodpe"
+  },
+  {
+   "id": "khotang",
+   "name": "Khotang"
+  },
+  {
+   "id": "khulalu",
+   "name": "Khulalu"
+  },
+  {
+   "id": "khunuwa",
+   "name": "Khunuwa"
+  },
+  {
+   "id": "khurkot",
+   "name": "Khurkot"
+  },
+  {
+   "id": "khuttiya",
+   "name": "Khuttiya"
+  },
+  {
+   "id": "kimathanka",
+   "name": "Kimathanka"
+  },
+  {
+   "id": "kodari",
+   "name": "Kodari"
+  },
+  {
+   "id": "kohalpur",
+   "name": "Kohalpur"
+  },
+  {
+   "id": "koilabas",
+   "name": "Koilabas"
+  },
+  {
+   "id": "kolti",
+   "name": "Kolti"
+  },
+  {
+   "id": "korla",
+   "name": "Korla"
+  },
+  {
+   "id": "kudu",
+   "name": "Kudu"
+  },
+  {
+   "id": "kulekhani",
+   "name": "Kulekhani"
+  },
+  {
+   "id": "kurtha",
+   "name": "Kurtha"
+  },
+  {
+   "id": "lahan",
+   "name": "Lahan"
+  },
+  {
+   "id": "lalgadh",
+   "name": "Lalgadh"
+  },
+  {
+   "id": "lamahi",
+   "name": "Lamahi"
+  },
+  {
+   "id": "lamki",
+   "name": "Lamki"
+  },
+  {
+   "id": "lapchegaun",
+   "name": "Lapchegaun"
+  },
+  {
+   "id": "lasunganj",
+   "name": "Lasunganj"
+  },
+  {
+   "id": "leguwaghat",
+   "name": "Leguwaghat"
+  },
+  {
+   "id": "liwag",
+   "name": "Liwang"
+  },
+  {
+   "id": "madar",
+   "name": "Madar"
+  },
+  {
+   "id": "mahabulekh",
+   "name": "Mahabulekh"
+  },
+  {
+   "id": "mahendranagar",
+   "name": "Mahendranagar"
+  },
+  {
+   "id": "mailung",
+   "name": "Mailung"
+  },
+  {
+   "id": "maipokhari",
+   "name": "Maipokhari"
+  },
+  {
+   "id": "malangawa",
+   "name": "Malangawa"
+  },
+  {
+   "id": "maldhunga",
+   "name": "Maldhunga"
+  },
+  {
+   "id": "malekhu",
+   "name": "Malekhu"
+  },
+  {
+   "id": "manma",
+   "name": "Manma"
+  },
+  {
+   "id": "manthali",
+   "name": "Manthali"
+  },
+  {
+   "id": "marim",
+   "name": "Marim"
+  },
+  {
+   "id": "martadi",
+   "name": "Martadi"
+  },
+  {
+   "id": "mechiful",
+   "name": "Mechi Pul"
+  },
+  {
+   "id": "mirchaiya",
+   "name": "Mirchaiya"
+  },
+  {
+   "id": "mudhe",
+   "name": "Mudhe"
+  },
+  {
+   "id": "muglin",
+   "name": "Muglin"
+  },
+  {
+   "id": "mujeliya",
+   "name": "Mujeliya (Janakpur)"
+  },
+  {
+   "id": "mulghat",
+   "name": "Mulghat"
+  },
+  {
+   "id": "murtiya",
+   "name": "Murtiya (IB)"
+  },
+  {
+   "id": "musikot",
+   "name": "Musikot"
+  },
+  {
+   "id": "nagma",
+   "name": "Nagma"
+  },
+  {
+   "id": "nakchelagna",
+   "name": "Nakchelagna"
+  },
+  {
+   "id": "narayanghat",
+   "name": "Narayanghat (Chitwan)"
+  },
+  {
+   "id": "naubise",
+   "name": "Naubise"
+  },
+  {
+   "id": "nawalpur",
+   "name": "Nawalpur"
+  },
+  {
+   "id": "nepalgunj",
+   "name": "Nepalgunj"
+  },
+  {
+   "id": "nijgadh",
+   "name": "Nijgadh"
+  },
+  {
+   "id": "okhaldhunga",
+   "name": "Okhaldhunga"
+  },
+  {
+   "id": "olanchungola",
+   "name": "Olanchungola"
+  },
+  {
+   "id": "pakali",
+   "name": "Pakali"
+  },
+  {
+   "id": "palung",
+   "name": "Palung"
+  },
+  {
+   "id": "panauti",
+   "name": "Panauti"
+  },
+  {
+   "id": "pancheshwar",
+   "name": "Pancheshwar"
+  },
+  {
+   "id": "panchthar",
+   "name": "Panchthar"
+  },
+  {
+   "id": "parasi",
+   "name": "Parasi"
+  },
+  {
+   "id": "pathlaiya",
+   "name": "Pathlaiya"
+  },
+  {
+   "id": "pharping",
+   "name": "Pharping"
+  },
+  {
+   "id": "phidim",
+   "name": "Phidim"
+  },
+  {
+   "id": "phikkal",
+   "name": "Phikkal"
+  },
+  {
+   "id": "piluhawa",
+   "name": "Piluhawa"
+  },
+  {
+   "id": "pipalkot",
+   "name": "Pipalkot"
+  },
+  {
+   "id": "pokhara",
+   "name": "Pokhara"
+  },
+  {
+   "id": "pushpalpur",
+   "name": "Pushpalpur"
+  },
+  {
+   "id": "pyuthan",
+   "name": "Pyuthan"
+  },
+  {
+   "id": "rabi",
+   "name": "Rabi"
+  },
+  {
+   "id": "rajbiraj",
+   "name": "Rajbiraj"
+  },
+  {
+   "id": "ramdi",
+   "name": "Ramdi"
+  },
+  {
+   "id": "rampur",
+   "name": "Rampur"
+  },
+  {
+   "id": "rani",
+   "name": "Rani"
+  },
+  {
+   "id": "rara",
+   "name": "Rara"
+  },
+  {
+   "id": "rasuwagadhi",
+   "name": "Rasuwagadhi"
+  },
+  {
+   "id": "ridi",
+   "name": "Ridi"
+  },
+  {
+   "id": "rudrapur",
+   "name": "Rudrapur"
+  },
+  {
+   "id": "rupal",
+   "name": "Rupal"
+  },
+  {
+   "id": "sahajpur",
+   "name": "Sahajpur"
+  },
+  {
+   "id": "salleri",
+   "name": "Salleri"
+  },
+  {
+   "id": "salyantar",
+   "name": "Salyantar"
+  },
+  {
+   "id": "samakhushi",
+   "name": "Samakhushi"
+  },
+  {
+   "id": "sandakpur",
+   "name": "Sandakpur"
+  },
+  {
+   "id": "sandhikharka",
+   "name": "Sandhikharka"
+  },
+  {
+   "id": "saphebagar",
+   "name": "Saphebagar"
+  },
+  {
+   "id": "satdobato",
+   "name": "Satdobato"
+  },
+  {
+   "id": "setidovan",
+   "name": "Seti Dovan"
+  },
+  {
+   "id": "shantinagar",
+   "name": "Shantinagar"
+  },
+  {
+   "id": "sindhuli",
+   "name": "Sindhuli (Sindhulimadi)"
+  },
+  {
+   "id": "singati",
+   "name": "Singati"
+  },
+  {
+   "id": "siraha",
+   "name": "Siraha"
+  },
+  {
+   "id": "sirsiya",
+   "name": "Sirsiya"
+  },
+  {
+   "id": "sisneri",
+   "name": "Sisneri"
+  },
+  {
+   "id": "sitapaila",
+   "name": "Sitapaila"
+  },
+  {
+   "id": "solu",
+   "name": "Solu"
+  },
+  {
+   "id": "sonbarsha",
+   "name": "Sonbarsha"
+  },
+  {
+   "id": "surkhet",
+   "name": "Surkhet"
+  },
+  {
+   "id": "surunga",
+   "name": "Surunga"
+  },
+  {
+   "id": "syabrubesi",
+   "name": "Syabrubesi"
+  },
+  {
+   "id": "syangja",
+   "name": "Syangja"
+  },
+  {
+   "id": "syaule",
+   "name": "Syaule"
+  },
+  {
+   "id": "tamakoshi",
+   "name": "Tamakoshi"
+  },
+  {
+   "id": "tansen",
+   "name": "Tansen"
+  },
+  {
+   "id": "taplejung",
+   "name": "Taplejung"
+  },
+  {
+   "id": "tarapatti",
+   "name": "Tarapatti"
+  },
+  {
+   "id": "tatopani",
+   "name": "Tatopani"
+  },
+  {
+   "id": "taulihawa",
+   "name": "Taulihawa"
+  },
+  {
+   "id": "telpani",
+   "name": "Telpani"
+  },
+  {
+   "id": "thadi",
+   "name": "Thadi"
+  },
+  {
+   "id": "tharmare",
+   "name": "Tharmare"
+  },
+  {
+   "id": "thawang",
+   "name": "Thawang"
+  },
+  {
+   "id": "thangan",
+   "name": "Thingan"
+  },
+  {
+   "id": "thori",
+   "name": "Thori"
+  },
+  {
+   "id": "tikapur",
+   "name": "Tikapur"
+  },
+  {
+   "id": "tinje",
+   "name": "Tinje"
+  },
+  {
+   "id": "tinkar",
+   "name": "Tinkar"
+  },
+  {
+   "id": "tokha",
+   "name": "Tokha"
+  },
+  {
+   "id": "trishuli",
+   "name": "Trishuli Bazaar"
+  },
+  {
+   "id": "triveni",
+   "name": "Triveni"
+  },
+  {
+   "id": "tulsipur",
+   "name": "Tulsipur"
+  },
+  {
+   "id": "tumlingtar",
+   "name": "Tumlingtar"
+  },
+  {
+   "id": "uraibhanjyang",
+   "name": "Uraibhanjyang"
+  },
+  {
+   "id": "wamitaksar",
+   "name": "Wamitaksar"
+  }
+ ],
+ "corridors": [
+  {
+   "id": "nh01",
+   "ref": "NH01",
+   "name": "East-West Highway",
+   "name_np": "पूर्व–पश्चिम राजमार्ग",
+   "from_place": "kakarbhitta",
+   "to_place": "gaddachauki",
+   "via_places": [
+    "itahari",
+    "narayanghat",
+    "butwal",
+    "kohalpur",
+    "nepalgunj"
+   ],
+   "from": "Kakarbhitta",
+   "to": "Gaddachauki",
+   "via": "Itahari, Narayanghat (Chitwan), Butwal, Kohalpur, Nepalgunj",
+   "segments": [
+    {
+     "id": "nh01-mechi-itahari",
+     "name": "Kakarbhitta – Itahari",
+     "expect": "Flat Terai highway; fast moving outside towns.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh01-daunne",
+     "name": "Daunne (Nawalparasi)",
+     "expect": "Chronic chokepoint: road collapses, dust and hours-long jams; upgrade works drag on — expect a slow crawl.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh01-butwal-kohalpur",
+     "name": "Butwal – Kohalpur",
+     "expect": "Flat Terai run; heavy truck traffic.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh01-kohalpur-gaddachauki",
+     "name": "Kohalpur – Mahendranagar",
+     "expect": "Long flat far-west run; fuel up — services thin out at night.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Mostly blacktopped; flat and fast across the Terai, hillier in the west.",
+    "typical_time": "End to end (≈1,028 km) is a 20+ hour bus journey — plan overnight halts.",
+    "monsoon_risk": "High at Daunne; Terai sections can flood in heavy rain.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Daunne (Nawalparasi): chronic chokepoint — road collapses, dust and hours-long jams; upgrade works drag on for years.",
+     "Terai stretches flood in sustained monsoon rain; check waterlogging near river crossings."
+    ],
+    "sources": [
+     {
+      "name": "Nepal Research / Kathmandu Post",
+      "url": "https://nepalresearch.org/infrastructure/roads.html"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh02",
+   "ref": "NH02",
+   "name": "Mechi Highway (Mechi Rajmarg)",
+   "name_np": "मेची राजमार्ग",
+   "from_place": "kechana",
+   "to_place": "olanchungola",
+   "via_places": [
+    "ilas",
+    "phidim",
+    "taplejung"
+   ],
+   "from": "Kechana",
+   "to": "Olanchungola",
+   "via": "Ilam, Phidim, Taplejung",
+   "segments": [
+    {
+     "id": "nh02-kechana-ilam",
+     "name": "Kechana – Ilam",
+     "expect": "Terai-to-hills climb.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh02-ilam-rajduwali",
+     "name": "Ilam – Rajduwali",
+     "expect": "Slide-prone: the section was fully cut off in July 2026 and the Rajduwali slide keeps moving.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh02-rajduwali-olanchungola",
+     "name": "Rajduwali – Olanchungola",
+     "expect": "Remote hill stretch toward the northern border.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Hill road, partly blacktopped; rough in stretches.",
+    "typical_time": null,
+    "monsoon_risk": "High — the Ilam–Rajduwali section was completely cut off in July 2026 and the Rajduwali landslide keeps sliding.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Ilam–Rajduwali: obstructed by landslides (July 2026); cuts Ilam, Panchthar and Taplejung off from the Tarai.",
+     "Belase–Bhanjyang alternative stays muddy and dilapidated even in normal rain."
+    ],
+    "sources": [
+     {
+      "name": "Artha Khabar",
+      "url": "https://arthakhabar.com/en/2026/07/13/75434/"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh03",
+   "ref": "NH03",
+   "name": "Pushpalal Mid-Hill Highway",
+   "name_np": "मध्यपहाडी राजमार्ग",
+   "from_place": "chiyobhanjyang",
+   "to_place": "jhulaghat",
+   "via_places": [],
+   "from": "Chiyo Bhanjyang",
+   "to": "Jhulaghat",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh03-east",
+     "name": "Eastern section",
+     "expect": "Hilly, partly under construction — expect gravel stretches.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh03-parbat",
+     "name": "Parbat (Kaligandaki)",
+     "expect": "Live DoR record Sep 27, 2026: river washed out the highway at chainage 64+200.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh03-rukum-east",
+     "name": "Rukum East",
+     "expect": "Night travel banned here after landslide blockages; rocky terrain, rockfalls common.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh03-west",
+     "name": "Western section",
+     "expect": "Remote hill highway — limited services.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "~1,776 km proposed; ~1,259 km tarred, rest under construction — expect gravel stretches.",
+    "typical_time": null,
+    "monsoon_risk": "Among Nepal's hardest highways in monsoon; rocky hill sections shed rockfalls and debris.",
+    "night_rules": "Night vehicular movement has been banned in Rukum East sections after landslide blockages.",
+    "vehicle_limits": null,
+    "hazards": [
+     "Rukum East: night travel banned where landslides blocked the road.",
+     "Rockfalls and debris deposition are common on rocky hill sections.",
+     "Live DoR record (Sep 27, 2026): Kaligandaki river washed out the highway at chainage 64+200, Parbat."
+    ],
+    "sources": [
+     {
+      "name": "LogCluster Nepal road assessment",
+      "url": "https://lca.logcluster.org/nepal-23-road-network"
+     },
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh04",
+   "ref": "NH04",
+   "name": "Birtamod–Chandragadhi–Bhadrapur–Mechi Pul",
+   "from_place": "birtamod",
+   "to_place": "mechiful",
+   "via_places": [],
+   "from": "Birtamod",
+   "to": "Mechi Pul",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh04-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh05",
+   "ref": "NH05",
+   "name": "Postal Highway (Hulaki Rajmarg)",
+   "name_np": "हुलाकी राजमार्ग",
+   "from_place": "bhadrapur",
+   "to_place": "dodhara",
+   "via_places": [],
+   "from": "Bhadrapur",
+   "to": "Dodhara (Kanchanpur)",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh05-east",
+     "name": "Eastern Terai",
+     "expect": "Flat border highway; sections under construction — expect diversions.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh05-west",
+     "name": "Western Terai",
+     "expect": "Flat border highway; completed stretches have regular traffic.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Two-lane Terai road; partly open, partly under construction (built in packages with Indian assistance).",
+    "typical_time": null,
+    "monsoon_risk": "Low landslide risk (flat Terai); monsoon waterlogging possible.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Many sections still under construction — expect diversions and unfinished stretches."
+    ],
+    "sources": [
+     {
+      "name": "LogCluster Nepal road assessment",
+      "url": "https://lca.logcluster.org/nepal-23-road-network"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh06",
+   "ref": "NH06",
+   "name": "Tamor Corridor",
+   "from_place": "chatara",
+   "to_place": "ganeshchok",
+   "via_places": [
+    "mulghat"
+   ],
+   "from": "Chatara",
+   "to": "Ganeshchok",
+   "via": "Mulghat",
+   "segments": [
+    {
+     "id": "nh06-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh07",
+   "ref": "NH07",
+   "name": "Pakali–Naya Koshipul",
+   "from_place": "pakali",
+   "to_place": "chatara",
+   "via_places": [],
+   "from": "Pakali",
+   "to": "Chatara",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh07-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh08",
+   "ref": "NH08",
+   "name": "Koshi Highway (Koshi Rajmarg)",
+   "name_np": "कोशी राजमार्ग",
+   "from_place": "rani",
+   "to_place": "kimathanka",
+   "via_places": [
+    "itahari",
+    "dharan",
+    "dhankuta",
+    "hile",
+    "tumlingtar",
+    "khandbari"
+   ],
+   "from": "Rani",
+   "to": "Kimathanka",
+   "via": "Itahari, Dharan, Dhankuta, Hile, Tumlingtar, Khandbari",
+   "segments": [
+    {
+     "id": "nh08-rani-dharan",
+     "name": "Rani – Dharan",
+     "expect": "Terai approach.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh08-dharan-dhankuta",
+     "name": "Dharan – Dhankuta",
+     "expect": "Critical climb: landslides at Mulghat and Namaste Jharna; Leuti river washes away road at Phedigaun almost every monsoon; Phedi river at Ghante washed away 30 m of blacktop. Travel early — rain builds through the afternoon.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh08-dhankuta-hile",
+     "name": "Dhankuta – Hile",
+     "expect": "Hill section onward to the northern districts.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh08-hile-kimathanka",
+     "name": "Hile – Kimathanka",
+     "expect": "Remote high-hill stretch to the Tibet border.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Blacktopped Dharan–Dhankuta–Hile; tight hairpin bends climbing out of Dharan.",
+    "typical_time": null,
+    "monsoon_risk": "High June–September: start early — rain builds through the afternoon and roads close for hours after heavy rain.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Dharan–Dhankuta: landslides at Mulghat and Namaste Jharna have fully blocked the road.",
+     "Leuti river at Phedigaun washes away ~100 m of road almost every monsoon; Phedi river at Ghante washed away 30 m of blacktop.",
+     "This is the critical link to Bhojpur, Sankhuwasabha, Taplejung and Panchthar — when it closes, the east hills are stranded."
+    ],
+    "sources": [
+     {
+      "name": "Khabarbutwal (English)",
+      "url": "https://english.khabarbutwal.com/2025/10/05/landslides-block-dharan-dhankuta-section-of-koshi-highway/"
+     },
+     {
+      "name": "Spotlight Nepal",
+      "url": "https://www.spotlightnepal.com/2025/05/31/flood-washes-away-road-ghante-koshi-highway-halts-transport-services-dhankuta/"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh09",
+   "ref": "NH09",
+   "name": "Madan Bhandari Highway",
+   "name_np": "मदन भण्डारी राजमार्ग",
+   "from_place": "bahundangi",
+   "to_place": "rupal",
+   "via_places": [
+    "dharan",
+    "hetauda",
+    "surkhet"
+   ],
+   "from": "Bahundangi",
+   "to": "Rupal",
+   "via": "Dharan, Hetauda, Surkhet",
+   "segments": [
+    {
+     "id": "nh09-east",
+     "name": "Eastern section (Jhapa–Dharan)",
+     "expect": "Under construction — gravel, narrow lanes, missing barriers.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh09-sindhuli",
+     "name": "Sindhuli–Hetauda",
+     "expect": "Inner-Terai construction zone; thin surfacing and potholes.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh09-doti",
+     "name": "Doti (Kera Bari)",
+     "expect": "Live DoR record Sep 27, 2026: PARTIAL_OPEN at chainage 72+800.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh09-west",
+     "name": "Western section",
+     "expect": "Remote; long unfinished stretches.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Under construction (1,200–1,390 km planned; ~240 km blacktopped). Expect gravel, narrow lanes, missing barriers and markings.",
+    "typical_time": null,
+    "monsoon_risk": "High — the Sep 2024 floods severely destroyed sections.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Ongoing construction zone: thin surfacing, potholes, no safety barriers on many stretches.",
+     "Live DoR record (Sep 27, 2026): PARTIAL_OPEN at Kera Bari, Doti (chainage 72+800)."
+    ],
+    "sources": [
+     {
+      "name": "Wikipedia — Madan Bhandari Inner Terai Highway",
+      "url": "https://en.wikipedia.org/wiki/Madan_Bhandari_Inner_Terai_Highway"
+     },
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh10",
+   "ref": "NH10",
+   "name": "Deurali–Mudhe–Chainpur–Bohoratar",
+   "from_place": "deurali",
+   "to_place": "bohoratar",
+   "via_places": [],
+   "from": "Deurali",
+   "to": "Bohoratar",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh10-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh11",
+   "ref": "NH11",
+   "name": "Phikkal–Shreeantu–Chabbise (Ilam)",
+   "from_place": "phikkal",
+   "to_place": "ilas",
+   "via_places": [],
+   "from": "Phikkal",
+   "to": "Ilam",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh11-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh12",
+   "ref": "NH12",
+   "name": "Ghurmi–Chatara (Udayapur)",
+   "from_place": "ghurmi",
+   "to_place": "chatara",
+   "via_places": [],
+   "from": "Ghurmi",
+   "to": "Chatara",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh12-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh13",
+   "ref": "NH13",
+   "name": "BP Highway (B.P. Rajmarg)",
+   "name_np": "बीपी राजमार्ग",
+   "from_place": "bardibas",
+   "to_place": "dhulikhel",
+   "via_places": [
+    "sindhuli",
+    "khurkot"
+   ],
+   "from": "Bardibas",
+   "to": "Dhulikhel",
+   "via": "Sindhuli (Sindhulimadi), Khurkot",
+   "segments": [
+    {
+     "id": "nh13-bardibas-sindhuli",
+     "name": "Bardibas – Sindhuli",
+     "expect": "Winding climb out of the Terai.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh13-sindhuli-khurkot",
+     "name": "Sindhuli – Khurkot (Roshi valley)",
+     "expect": "Roshi river flooding is the recurring threat; night ban 6 PM–4 AM on Khurkot–Nepalthok–Katunjebesi during flood risk.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh13-khurkot-dhulikhel",
+     "name": "Khurkot – Dhulikhel",
+     "expect": "Mudslide risk at Mangaltar; narrow valley road.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Blacktopped but narrow and winding through the Roshi valley.",
+    "typical_time": null,
+    "monsoon_risk": "Very high — Roshi river flooding is the recurring threat.",
+    "night_rules": "Night travel ban 6 PM – 4 AM on the Khurkot–Nepalthok–Katunjebesi section during flood risk.",
+    "vehicle_limits": null,
+    "hazards": [
+     "Roshi river flooding closes the Dhulikhel–Nepalthok stretch.",
+     "Mudslide at Mangaltar (Roshi) has made the section impassable.",
+     "Live DoR record (Sep 25, 2026): Barkhe Khola–Dhulikhel closed by heavy rain; later marked 'Road Open Now'."
+    ],
+    "sources": [
+     {
+      "name": "Meroauto / Nepal Police",
+      "url": "https://www.en.meroauto.com/floods-and-landslides-block-roads-in-37-districts/"
+     },
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh14",
+   "ref": "NH14",
+   "name": "Gaighat–Rajbiraj (Udayapur–Saptari)",
+   "from_place": "chatara",
+   "to_place": "rajbiraj",
+   "via_places": [],
+   "from": "Chatara",
+   "to": "Rajbiraj",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh14-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh15",
+   "ref": "NH15",
+   "name": "Gwarko–Panauti (Lalitpur–Kavre)",
+   "from_place": "gwarko",
+   "to_place": "panauti",
+   "via_places": [],
+   "from": "Gwarko (Lalitpur)",
+   "to": "Panauti",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh15-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh16",
+   "ref": "NH16",
+   "name": "Thadi–Lahan – Gaighat–Solu",
+   "from_place": "thadi",
+   "to_place": "solu",
+   "via_places": [],
+   "from": "Thadi",
+   "to": "Solu",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh16-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh17",
+   "ref": "NH17",
+   "name": "Prithvi Highway (Prithvi Rajmarg)",
+   "name_np": "पृथ्वी राजमार्ग",
+   "from_place": "naubise",
+   "to_place": "pokhara",
+   "via_places": [
+    "muglin"
+   ],
+   "from": "Naubise",
+   "to": "Pokhara",
+   "via": "Muglin",
+   "segments": [
+    {
+     "id": "nh17-ktm-naubise",
+     "name": "Kathmandu – Naubise (Nagdhunga)",
+     "expect": "Valley exit; congestion and slide risk at the rim.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh17-naubise-malekhu",
+     "name": "Naubise – Malekhu",
+     "expect": "Winding Trishuli-side highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh17-malekhu-muglin",
+     "name": "Malekhu – Muglin (Krishnabhir)",
+     "expect": "Chronic landslide zone — 11 slide sites in Oct 2025; new track cut above the collapsed section. Check status before leaving.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh17-muglin-pokhara",
+     "name": "Muglin – Pokhara (Tanahun)",
+     "expect": "Busy tourist highway stretch.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Blacktopped; winding hill highway, heavy truck and tourist traffic.",
+    "typical_time": "Kathmandu–Pokhara ≈ 6–8 hrs by bus in normal conditions.",
+    "monsoon_risk": "High — repeated monsoon closures, especially Malekhu–Muglin.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Krishnabhir (Malekhu–Muglin): chronic landslide zone — 11 slide sites in Oct 2025; new track cut above the collapsed section.",
+     "Nagdhunga (Kathmandu exit): congestion and slide risk at the valley rim."
+    ],
+    "sources": [
+     {
+      "name": "OnlineKhabar",
+      "url": "https://english.onlinekhabar.com/krishnabhir-cut-prithvi-highway.html"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh18",
+   "ref": "NH18",
+   "name": "Balaju–Trishuli–Dhunche–Syaphrubesi",
+   "from_place": "balaju",
+   "to_place": "syabrubesi",
+   "via_places": [
+    "trishuli",
+    "dhunche"
+   ],
+   "from": "Balaju (Kathmandu)",
+   "to": "Syabrubesi",
+   "via": "Trishuli Bazaar, Dhunche",
+   "segments": [
+    {
+     "id": "nh18-balaju-trishuli",
+     "name": "Balaju – Trishuli",
+     "expect": "Paved valley road.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh18-trishuli-ramche",
+     "name": "Trishuli – Ramche",
+     "expect": "Narrower, winding; moderate condition.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh18-ramche-dhunche",
+     "name": "Ramche – Dhunche (landslide zone)",
+     "expect": "Most challenging section in all seasons: ~3 km of rough, unpaved active slope — 4WD strongly recommended.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh18-dhunche-syabrubesi",
+     "name": "Dhunche – Syabrubesi",
+     "expect": "Steep narrow descent; check flood-damage status — through access has been disrupted.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Paved but narrow and winding; rough unpaved stretches near Dhunche.",
+    "typical_time": null,
+    "monsoon_risk": "High — monsoon landslides and surface water on the road; avoid non-essential travel June–August.",
+    "night_rules": null,
+    "vehicle_limits": "High ground clearance / 4WD strongly recommended around Ramche–Dhunche.",
+    "hazards": [
+     "Ramche landslide zone (~3 km before Dhunche): the most technically challenging section in all seasons — rough, unpaved, active slope.",
+     "Betrawati–Dhunche: the most demanding part; susceptible to closures after heavy rain."
+    ],
+    "sources": [
+     {
+      "name": "Vehicle Hiring Nepal — Pasang Lhamu Highway 2026 update",
+      "url": "https://vehiclehiringnepal.com/pasang-lhamu-highway-2026-update/"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh19",
+   "ref": "NH19",
+   "name": "Ridi–Pyuthan–Surkhet",
+   "from_place": "ridi",
+   "to_place": "surkhet",
+   "via_places": [
+    "pyuthan"
+   ],
+   "from": "Ridi",
+   "to": "Surkhet",
+   "via": "Pyuthan",
+   "segments": [
+    {
+     "id": "nh19-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh20",
+   "ref": "NH20",
+   "name": "Mirchaiya–Katari–Okhaldhunga–Salleri",
+   "from_place": "madar",
+   "to_place": "salleri",
+   "via_places": [
+    "mirchaiya",
+    "katari",
+    "okhaldhunga"
+   ],
+   "from": "Madar",
+   "to": "Salleri",
+   "via": "Mirchaiya, Katari, Okhaldhunga",
+   "segments": [
+    {
+     "id": "nh20-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh21",
+   "ref": "NH21",
+   "name": "Sitapaila–Dharke",
+   "from_place": "sitapaila",
+   "to_place": "dharke",
+   "via_places": [],
+   "from": "Sitapaila",
+   "to": "Dharke",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh21-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh22",
+   "ref": "NH22",
+   "name": "Dhalkebar–Janakpur–Jatahi",
+   "from_place": "dhalkebar",
+   "to_place": "akraharghat",
+   "via_places": [
+    "janakpur"
+   ],
+   "from": "Dhalkebar",
+   "to": "Akraharghat",
+   "via": "Janakpur",
+   "segments": [
+    {
+     "id": "nh22-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh23",
+   "ref": "NH23",
+   "name": "Diktel–Charikot–Khadichaur",
+   "from_place": "diktel",
+   "to_place": "khadichaur",
+   "via_places": [
+    "salleri",
+    "charikot"
+   ],
+   "from": "Diktel",
+   "to": "Khadichaur",
+   "via": "Salleri, Charikot",
+   "segments": [
+    {
+     "id": "nh23-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh24",
+   "ref": "NH24",
+   "name": "Lalgadh–Bardibas (R.T.O. Road)",
+   "from_place": "lalgadh",
+   "to_place": "bardibas",
+   "via_places": [],
+   "from": "Lalgadh",
+   "to": "Bardibas",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh24-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh25",
+   "ref": "NH25",
+   "name": "Dumre–Besisahar–Chame",
+   "from_place": "dumre",
+   "to_place": "chame",
+   "via_places": [
+    "besisahar"
+   ],
+   "from": "Dumre",
+   "to": "Chame",
+   "via": "Besisahar",
+   "segments": [
+    {
+     "id": "nh25-dumre-besisahar",
+     "name": "Dumre – Besisahar",
+     "expect": "Gateway to the Annapurna region.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh25-besisahar-rambazar",
+     "name": "Besisahar – Rambazar (Ghermu)",
+     "expect": "Live DoR record: landslide at Rambazar, Lamjung — reopened Oct 2, 2026 after 5 days.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh25-rambazar-chame",
+     "name": "Rambazar – Chame (Manang)",
+     "expect": "Live DoR record: landslide at Khotro — reopened Oct 3, 2026 after 7 days.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Hill road to the Annapurna trailheads; landslide-prone cuttings.",
+    "typical_time": null,
+    "monsoon_risk": "High in monsoon.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Live DoR records: landslide at Rambazar (Besisahar–Ghermu, Lamjung) — reopened Oct 2, 2026 after 5 days.",
+     "Landslide at Khotro (Sattale–Chame, Manang) — reopened Oct 3, 2026 after 7 days."
+    ],
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh26",
+   "ref": "NH26",
+   "name": "Jamunibas–Janakpur",
+   "from_place": "jamunibas",
+   "to_place": "janakpur",
+   "via_places": [],
+   "from": "Jamunibas",
+   "to": "Janakpur",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh26-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh28",
+   "ref": "NH28",
+   "name": "Bhittamod–Bardibas – Khurkot–Lapchegaun",
+   "from_place": "bhittamod",
+   "to_place": "lapchegaun",
+   "via_places": [
+    "jaleswor",
+    "bardibas",
+    "khurkot",
+    "manthali"
+   ],
+   "from": "Bhittamod",
+   "to": "Lapchegaun",
+   "via": "Jaleshwor, Bardibas, Khurkot, Manthali",
+   "segments": [
+    {
+     "id": "nh28-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh29",
+   "ref": "NH29",
+   "name": "Kanchanban–Siraha",
+   "from_place": "kanchanban",
+   "to_place": "siraha",
+   "via_places": [],
+   "from": "Kanchanban",
+   "to": "Siraha",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh29-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh30",
+   "ref": "NH30",
+   "name": "Janakpur–Dhanushadham (Ramayan Circuit)",
+   "from_place": "mujeliya",
+   "to_place": "pushpalpur",
+   "via_places": [
+    "dhanushadham"
+   ],
+   "from": "Mujeliya (Janakpur)",
+   "to": "Pushpalpur",
+   "via": "Dhanushadham",
+   "segments": [
+    {
+     "id": "nh30-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh31",
+   "ref": "NH31",
+   "name": "Dolalghat–Chautara",
+   "from_place": "dolalghat",
+   "to_place": "chautara",
+   "via_places": [],
+   "from": "Dolalghat",
+   "to": "Chautara",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh31-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh32",
+   "ref": "NH32",
+   "name": "Nawalpur–Malangawa–Sonbarsha",
+   "from_place": "nawalpur",
+   "to_place": "sonbarsha",
+   "via_places": [],
+   "from": "Nawalpur",
+   "to": "Sonbarsha",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh32-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh33",
+   "ref": "NH33",
+   "name": "Nijgadh–Kathmandu",
+   "from_place": "nijgadh",
+   "to_place": "kathmandu",
+   "via_places": [],
+   "from": "Nijgadh",
+   "to": "Kathmandu",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh33-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh34",
+   "ref": "NH34",
+   "name": "Araniko Highway (Arniko Rajmarg)",
+   "name_np": "अरनिको राजमार्ग",
+   "from_place": "kathmandu",
+   "to_place": "kodari",
+   "via_places": [
+    "dhulikhel",
+    "dolalghat",
+    "barabise",
+    "tatopani"
+   ],
+   "from": "Kathmandu",
+   "to": "Kodari",
+   "via": "Dhulikhel, Dolalghat, Barabise, Tatopani",
+   "segments": [
+    {
+     "id": "nh34-ktm-dhulikhel",
+     "name": "Kathmandu – Dhulikhel",
+     "expect": "Good paved highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh34-dhulikhel-barabise",
+     "name": "Dhulikhel – Barabise",
+     "expect": "Descending toward the Sun Koshi; trade-truck traffic.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh34-barabise-tatopani",
+     "name": "Barabise – Tatopani",
+     "expect": "Narrow shelf above the Bhote Koshi gorge — one of Nepal's most landslide-prone sections; slide points at Daklang and Ghattekhola. Fully closed Aug 24–Sep 22, 2025.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh34-tatopani-kodari",
+     "name": "Tatopani – Kodari (border)",
+     "expect": "Steepest, narrowest 8 km; border crossing status changes at short notice — confirm before heading up.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Paved to Barabise; beyond that a narrow shelf cut into the cliff above the Bhote Koshi gorge.",
+    "typical_time": "Kathmandu–Kodari is 112 km.",
+    "monsoon_risk": "Extreme June–September beyond Barabise — closures are frequent; verify before travel.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Beyond Barabise: one of Nepal's most landslide-prone sections — steep unstable hillsides both sides of the gorge.",
+     "Slide points at Daklang, Ghattekhola and Kodari; the road was fully closed Aug 24 – Sep 22, 2025.",
+     "Tatopani–Kodari border crossing status changes at short notice — confirm before heading up."
+    ],
+    "sources": [
+     {
+      "name": "Wikipedia — Araniko Highway",
+      "url": "https://en.wikipedia.org/wiki/Araniko_Highway"
+     },
+     {
+      "name": "Peoples' Review",
+      "url": "https://mypeoplesreview.com/2025/09/22/araniko-highway-reopens-after-a-month/"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh35",
+   "ref": "NH35",
+   "name": "Kalaiya–Martihawa",
+   "from_place": "piluhawa",
+   "to_place": "kalaiya",
+   "via_places": [],
+   "from": "Piluhawa",
+   "to": "Kalaiya",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh35-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh36",
+   "ref": "NH36",
+   "name": "Chandranigahpur–Gaur",
+   "from_place": "chandranigahpur",
+   "to_place": "gaur",
+   "via_places": [],
+   "from": "Chandranigahpur",
+   "to": "Gaur",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh36-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh37",
+   "ref": "NH37",
+   "name": "Kanti Lokpath (Kanti Rajpath)",
+   "name_np": "कान्ति लोकपथ",
+   "from_place": "hetauda",
+   "to_place": "ekantakuna",
+   "via_places": [
+    "thangan"
+   ],
+   "from": "Hetauda",
+   "to": "Ekantakuna (Lalitpur)",
+   "via": "Thingan",
+   "segments": [
+    {
+     "id": "nh37-hetauda-thingan",
+     "name": "Hetauda – Thingan",
+     "expect": "Climb out of Hetauda; obstructions reported at Pangdure and Takunje.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh37-thingan-satdobato",
+     "name": "Thingan – Satdobato (Lalitpur)",
+     "expect": "Live DoR record Sep 27, 2026: CLOSED by landslide at Chhapeli–Tinpane (NH37-003). Narrow mountain road — light vehicles best.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Narrow mountain road; blacktopped in parts, rough elsewhere.",
+    "typical_time": "Hetauda–Kathmandu normally ≈ 3 hrs; ≈ 5 hrs under current diversions and jams.",
+    "monsoon_risk": "High — slides at multiple points toward Lalitpur.",
+    "night_rules": null,
+    "vehicle_limits": "Light vehicles work best; heavy vehicles are routed via Tribhuvan/Kanti under the diversion plan.",
+    "hazards": [
+     "Live DoR record (Sep 27, 2026): CLOSED by landslide at Chhapeli–Tinpane (NH37-003), Lalitpur.",
+     "Obstructions reported at Pangdure and Takunje toward Lalitpur."
+    ],
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     },
+     {
+      "name": "The Himalayan Times",
+      "url": "https://thehimalayantimes.com/ampArticle/1040411"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh38",
+   "ref": "NH38",
+   "name": "Kathmandu Outer Ringroad",
+   "from_place": "kathmandu",
+   "to_place": "kathmandu",
+   "via_places": [],
+   "from": "Kathmandu",
+   "to": "Kathmandu",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh38-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh39",
+   "ref": "NH39",
+   "name": "Kathmandu Ringroad",
+   "from_place": "kathmandu",
+   "to_place": "kathmandu",
+   "via_places": [],
+   "from": "Kathmandu",
+   "to": "Kathmandu",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh39-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh40",
+   "ref": "NH40",
+   "name": "Samakhushi–Tokha–Bidur",
+   "from_place": "samakhushi",
+   "to_place": "bidur",
+   "via_places": [
+    "tokha"
+   ],
+   "from": "Samakhushi",
+   "to": "Bidur",
+   "via": "Tokha",
+   "segments": [
+    {
+     "id": "nh40-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh41",
+   "ref": "NH41",
+   "name": "Tribhuvan Highway (Tribhuvan Rajpath)",
+   "name_np": "त्रिभुवन राजपथ",
+   "from_place": "sirsiya",
+   "to_place": "kathmandu",
+   "via_places": [
+    "hetauda",
+    "bhimphedi",
+    "palung",
+    "naubise"
+   ],
+   "from": "Sirsiya",
+   "to": "Kathmandu",
+   "via": "Hetauda, Bhimphedi, Palung, Naubise",
+   "segments": [
+    {
+     "id": "nh41-sirsiya-hetauda",
+     "name": "Sirsiya – Hetauda",
+     "expect": "Terai approach.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh41-hetauda-bhimphedi",
+     "name": "Hetauda – Bhimphedi",
+     "expect": "Hill climb.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh41-bhimphedi-palung",
+     "name": "Bhimphedi – Palung",
+     "expect": "Narrow winding hill section.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh41-palung-naubise",
+     "name": "Palung – Naubise",
+     "expect": "Running one-way only under the current diversion plan; expect congestion.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh41-naubise-kathmandu",
+     "name": "Naubise – Kathmandu",
+     "expect": "Valley entry via Thankot.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Blacktopped; narrow and winding over the Palung hills.",
+    "typical_time": "Hetauda–Kathmandu normally ≈ 3 hrs.",
+    "monsoon_risk": "Moderate — the reliable all-weather Kathmandu–Hetauda link.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Currently running one-way only under the diversion plan (heavy vehicles toward Kathmandu use this road).",
+     "Expect congestion at Naubise and Palung while Prithvi Highway diversions last."
+    ],
+    "sources": [
+     {
+      "name": "OnlineKhabar",
+      "url": "https://english.onlinekhabar.com/landslides-kathmandus-key-highways.html"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh42",
+   "ref": "NH42",
+   "name": "Galchhi–Rasuwagadhi",
+   "from_place": "thori",
+   "to_place": "rasuwagadhi",
+   "via_places": [
+    "malekhu",
+    "galchhi",
+    "trishuli",
+    "betrawati",
+    "mailung",
+    "syabrubesi"
+   ],
+   "from": "Thori",
+   "to": "Rasuwagadhi",
+   "via": "Malekhu, Galchhi, Trishuli Bazaar, Betrawati, Mailung, Syabrubesi",
+   "segments": [
+    {
+     "id": "nh42-thori-malekhu",
+     "name": "Thori – Malekhu",
+     "expect": "Southern section.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh42-malekhu-galchhi",
+     "name": "Malekhu – Galchhi",
+     "expect": "Prithvi Highway overlap zone.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh42-galchhi-betrawati",
+     "name": "Galchhi – Betrawati",
+     "expect": "Flood-damage zone — check DoR restoration status.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh42-betrawati-dhunche",
+     "name": "Betrawati – Dhunche (via Mailung)",
+     "expect": "Partially restored; 4WD detour conditions.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh42-dhunche-syabrubesi",
+     "name": "Dhunche – Syabrubesi",
+     "expect": "NO ROAD since the Aug 26, 2026 flood — helicopter or foot only.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh42-syabrubesi-rasuwagadhi",
+     "name": "Syabrubesi – Rasuwagadhi (Timure)",
+     "expect": "Border road; through access not confirmed.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Severely damaged — ~40 km of road and 41 bridges destroyed in the Aug 26, 2026 Bhotekoshi flood.",
+    "typical_time": null,
+    "monsoon_risk": "Extreme — do not plan through-travel until DoR confirms restoration.",
+    "night_rules": null,
+    "vehicle_limits": "Light 4WD only on the detour; no vehicles beyond Dhunche.",
+    "hazards": [
+     "NO ROAD between Dhunche and Syabrubesi — reachable only by helicopter or on foot.",
+     "Detour to Dhunche: narrow single-lane via Tokha–Chhahare–Bogatitar–Kalikasthan; poor condition, held up by landslides and mud.",
+     "Ramche landslide zone (~3 km before Dhunche): active slope, 4WD recommended.",
+     "Postpone non-essential travel north of Dhunche (Langtang trailheads, Timure, Rasuwagadhi)."
+    ],
+    "sources": [
+     {
+      "name": "AroundTrail — Rasuwa flood 2026",
+      "url": "https://www.aroundtrail.com/rasuwa-flood-2026"
+     },
+     {
+      "name": "US Embassy Nepal natural disaster alert",
+      "url": "https://np.usembassy.gov/natural-disaster-alert-continued-flood-and-landslide-risk/"
+     },
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh43",
+   "ref": "NH43",
+   "name": "Malekhu–Dhading–Salyantar",
+   "from_place": "malekhu",
+   "to_place": "salyantar",
+   "via_places": [
+    "dhading"
+   ],
+   "from": "Malekhu",
+   "to": "Salyantar",
+   "via": "Dhading Besi",
+   "segments": [
+    {
+     "id": "nh43-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh44",
+   "ref": "NH44",
+   "name": "Narayanghat–Mugling Road",
+   "name_np": "नारायणघाट–मुग्लिन सडक",
+   "from_place": "narayanghat",
+   "to_place": "muglin",
+   "via_places": [],
+   "from": "Narayanghat (Chitwan)",
+   "to": "Muglin",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh44-ngd-jalbire",
+     "name": "Narayanghat – Jalbire",
+     "expect": "Busy highway start; night holds possible in heavy rain.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh44-tuin-khola",
+     "name": "Tuin Khola bridge (Ichchhakamana-5)",
+     "expect": "Most slide-prone chokepoint — soil-cutting works hold traffic in windows; continuous rain keeps debris falling.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh44-simaltal",
+     "name": "Simaltal",
+     "expect": "Repeat slide location.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh44-kilo15",
+     "name": "15 Kilo",
+     "expect": "Repeat slide location.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh44-jalbire-muglin",
+     "name": "Jalbire – Muglin",
+     "expect": "Final stretch to the Prithvi Highway junction.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Blacktopped; the country's busiest hill highway — heavy truck and bus traffic.",
+    "typical_time": "Narayanghat–Muglin ≈ 36 km, 1–1.5 hrs in normal flow.",
+    "monsoon_risk": "Very high — opens and closes almost daily in monsoon.",
+    "night_rules": "Traffic suspended at night during heavy rain (e.g. 9 PM holds); vehicles staged at holding centres.",
+    "vehicle_limits": null,
+    "hazards": [
+     "Tuin Khola bridge (Ichchhakamana-5): the most slide-prone chokepoint — soil-cutting works hold traffic in windows.",
+     "Simaltal, 15 Kilo and Jalbire: repeat slide locations.",
+     "Continuous rain keeps rocks and soil falling even between clearances."
+    ],
+    "sources": [
+     {
+      "name": "Rising Nepal Daily",
+      "url": "https://risingnepaldaily.com/news/69249"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh45",
+   "ref": "NH45",
+   "name": "Khairenitar–Bhimad–Kawasoti",
+   "from_place": "khairenitar",
+   "to_place": "kawasoti",
+   "via_places": [
+    "bhimad"
+   ],
+   "from": "Khairenitar",
+   "to": "Kawasoti",
+   "via": "Bhimad",
+   "segments": [
+    {
+     "id": "nh45-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh46",
+   "ref": "NH46",
+   "name": "Bhumahi–Parasi",
+   "from_place": "bhumahi",
+   "to_place": "parasi",
+   "via_places": [],
+   "from": "Bhumahi",
+   "to": "Parasi",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh46-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh47",
+   "ref": "NH47",
+   "name": "Siddhartha Highway (Siddharth Rajmarg)",
+   "name_np": "सिद्धार्थ राजमार्ग",
+   "from_place": "belahiya",
+   "to_place": "pokhara",
+   "via_places": [
+    "bhairahawa",
+    "butwal",
+    "tansen",
+    "syangja"
+   ],
+   "from": "Belahiya",
+   "to": "Pokhara",
+   "via": "Bhairahawa, Butwal, Tansen, Syangja",
+   "segments": [
+    {
+     "id": "nh47-belahiya-butwal",
+     "name": "Belahiya – Butwal",
+     "expect": "Terai section.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh47-butwal-siddhababa",
+     "name": "Butwal – Siddhababa",
+     "expect": "Climb begins; sharp bends.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh47-siddhababa",
+     "name": "Siddhababa (dam-side area)",
+     "expect": "Continuous landslides from above — clearance is difficult during rain; live DoR record Oct 7, 2026: temporary precautionary closure, reopened within the hour.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh47-siddhababa-tansen",
+     "name": "Siddhababa – Tansen",
+     "expect": "Hill climb to Palpa.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh47-tansen-pokhara",
+     "name": "Tansen – Pokhara (via Syangja)",
+     "expect": "Hill highway onward.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Blacktopped hill highway; sharp bends around Siddhababa.",
+    "typical_time": null,
+    "monsoon_risk": "High — continuous landslides from above at the dam-side area of Siddhababa.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Siddhababa (Tansen–Butwal): continuous slides from above make clearance difficult during rain.",
+     "Live DoR record (Oct 7, 2026): temporary precautionary closure at Siddhababa (NH47-004), reopened within the hour."
+    ],
+    "sources": [
+     {
+      "name": "Hamro Patro",
+      "url": "https://www.hamropatro.com/en/news/detail/2436761619319758-palpa-roads-blocked-by-landslides-due-to-continuous-rain"
+     },
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh48",
+   "ref": "NH48",
+   "name": "Tansen–Ridi–Korla",
+   "from_place": "tansen",
+   "to_place": "korla",
+   "via_places": [
+    "ridi"
+   ],
+   "from": "Tansen",
+   "to": "Korla",
+   "via": "Ridi",
+   "segments": [
+    {
+     "id": "nh48-tansen-ridi",
+     "name": "Tansen – Ridi",
+     "expect": "Hill road.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh48-ridi-rudrabeni",
+     "name": "Ridi – Rudrabeni (Kaligandaki)",
+     "expect": "Live DoR record: Kaligandaki flooding at Ridi Bazar — reopened Sep 30, 2026.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh48-balewa-maldhunga",
+     "name": "Balewa – Maldhunga",
+     "expect": "Live DoR record: landslide — reopened Oct 2, 2026.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh48-maldhunga-korla",
+     "name": "Maldhunga – Korla (border)",
+     "expect": "Remote northern stretch.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Hill road along the Kaligandaki corridor; flood-prone riverside stretches.",
+    "typical_time": null,
+    "monsoon_risk": "High — Kaligandaki flooding closes riverside sections.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Live DoR records: landslide at Balewa–Maldhunga (reopened Oct 2, 2026); Kaligandaki flooding at Ridi–Rudrabeni, Ridi Bazar (reopened Sep 30); landslide at Rakse (reopened Sep 30)."
+    ],
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh49",
+   "ref": "NH49",
+   "name": "Bartung–Tansen–Kharwang",
+   "from_place": "bartung",
+   "to_place": "kharwang",
+   "via_places": [
+    "tansen"
+   ],
+   "from": "Bartung",
+   "to": "Kharwang",
+   "via": "Tansen",
+   "segments": [
+    {
+     "id": "nh49-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh50",
+   "ref": "NH50",
+   "name": "Jitpur–Taulihawa–Khunuwa",
+   "from_place": "jitpur",
+   "to_place": "khunuwa",
+   "via_places": [
+    "taulihawa"
+   ],
+   "from": "Jitpur",
+   "to": "Khunuwa",
+   "via": "Taulihawa",
+   "segments": [
+    {
+     "id": "nh50-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh51",
+   "ref": "NH51",
+   "name": "Taulihawa–Gorusinge–Sandhikharka",
+   "from_place": "taulihawa",
+   "to_place": "sandhikharka",
+   "via_places": [
+    "gorusinge"
+   ],
+   "from": "Taulihawa",
+   "to": "Sandhikharka",
+   "via": "Gorusinge",
+   "segments": [
+    {
+     "id": "nh51-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh52",
+   "ref": "NH52",
+   "name": "Kakarhawa–Dhorpatan",
+   "from_place": "kakarhawa",
+   "to_place": "dhorpatan",
+   "via_places": [
+    "sandhikharka",
+    "burtibang"
+   ],
+   "from": "Kakarhawa",
+   "to": "Dhorpatan",
+   "via": "Sandhikharka, Burtibang",
+   "segments": [
+    {
+     "id": "nh52-kakarhawa-sandhikharka",
+     "name": "Kakarhawa – Sandhikharka",
+     "expect": "Terai-to-hill climb.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh52-khursaney",
+     "name": "Khursaney (chainage 17+000)",
+     "expect": "Live DoR record: repeated debris flow — debris redeposits shortly after clearing; reopened Oct 1, 2026.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh52-khursaney-dhorpatan",
+     "name": "Khursaney – Dhorpatan",
+     "expect": "Remote hill stretch.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Hill road; debris-flow prone cuttings.",
+    "typical_time": null,
+    "monsoon_risk": "High.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Live DoR record: repeated debris flow at Khursaney (chainage 17+000) — debris redeposits shortly after clearing; reopened Oct 1, 2026."
+    ],
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh53",
+   "ref": "NH53",
+   "name": "Bhalubang–Rolpa–Darbot",
+   "from_place": "bhalubang",
+   "to_place": "darbot",
+   "via_places": [
+    "liwag"
+   ],
+   "from": "Bhalubang",
+   "to": "Darbot",
+   "via": "Liwang",
+   "segments": [
+    {
+     "id": "nh53-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh54",
+   "ref": "NH54",
+   "name": "Koilabas–Thawang (Sahid Marg)",
+   "from_place": "koilabas",
+   "to_place": "thawang",
+   "via_places": [
+    "lamahi",
+    "ghorahi",
+    "holeri"
+   ],
+   "from": "Koilabas",
+   "to": "Thawang",
+   "via": "Lamahi, Ghorahi, Holeri",
+   "segments": [
+    {
+     "id": "nh54-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh55",
+   "ref": "NH55",
+   "name": "Ameliya–Musikot",
+   "from_place": "ameliya",
+   "to_place": "musikot",
+   "via_places": [
+    "tulsipur"
+   ],
+   "from": "Ameliya",
+   "to": "Musikot",
+   "via": "Tulsipur",
+   "segments": [
+    {
+     "id": "nh55-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh56",
+   "ref": "NH56",
+   "name": "Rara Highway (Rara Rajmarg)",
+   "from_place": "tharmare",
+   "to_place": "rara",
+   "via_places": [
+    "jajarkot",
+    "jumla"
+   ],
+   "from": "Tharmare",
+   "to": "Rara",
+   "via": "Jajarkot, Jumla",
+   "segments": [
+    {
+     "id": "nh56-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh57",
+   "ref": "NH57",
+   "name": "Bheri Corridor",
+   "name_np": "भेरी कोरिडोर",
+   "from_place": "chinchu",
+   "to_place": "marim",
+   "via_places": [
+    "jajarkot",
+    "dunai"
+   ],
+   "from": "Chinchu",
+   "to": "Marim",
+   "via": "Jajarkot, Dunai",
+   "segments": [
+    {
+     "id": "nh57-chinchu-jajarkot",
+     "name": "Chinchu – Jajarkot",
+     "expect": "Mid-hill corridor start.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh57-jajarkot-dolpa",
+     "name": "Jajarkot – Dolpa (Nalgad)",
+     "expect": "Completely blocked by floods in the Nalgad area; five bridges unfinished after six years — expect dangerous river crossings in monsoon.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh57-dolpa-marim",
+     "name": "Dolpa – Marim",
+     "expect": "Remote high-mountain stretch.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "317 km corridor; rough mountain road, partly under construction.",
+    "typical_time": null,
+    "monsoon_risk": "Very high — Jajarkot–Dolpa section floods and blocks.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Jajarkot–Dolpa: completely blocked by floods in the Nalgad area.",
+     "Five bridges unfinished after six years — expect dangerous river crossings in monsoon.",
+     "Delays inflate prices and strand travellers on the Dolpa side."
+    ],
+    "sources": [
+     {
+      "name": "Wikipedia — Bheri Corridor",
+      "url": "https://en.wikipedia.org/wiki/Bheri_Corridor"
+     },
+     {
+      "name": "Hamro Patro",
+      "url": "https://www.hamropatro.com/en/news/topic/bheri-corridor"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh58",
+   "ref": "NH58",
+   "name": "Karnali Highway (Karnali Rajmarg)",
+   "name_np": "कर्णाली राजमार्ग",
+   "from_place": "jamunaha",
+   "to_place": "hilsa",
+   "via_places": [
+    "nepalgunj",
+    "kohalpur",
+    "surkhet",
+    "dailekh",
+    "jumla"
+   ],
+   "from": "Jamunaha",
+   "to": "Hilsa",
+   "via": "Nepalgunj, Kohalpur, Surkhet, Dailekh, Jumla",
+   "segments": [
+    {
+     "id": "nh58-jamunaha-nepalgunj",
+     "name": "Jamunaha – Nepalgunj",
+     "expect": "Terai border approach.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh58-nepalgunj-surkhet",
+     "name": "Nepalgunj – Surkhet",
+     "expect": "Climb to the hills.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh58-surkhet-kalikot",
+     "name": "Surkhet – Kalikot",
+     "expect": "Repeat landslide zone.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh58-gaganekhola",
+     "name": "Gaganekhola (Kalikot)",
+     "expect": "Repeat chokepoint stranding Jumla-bound vehicles; Kalekhola collapse has fully halted this section before. Travel only after checking conditions.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh58-kalikot-hilsa",
+     "name": "Kalikot – Hilsa",
+     "expect": "Remote far-north stretch to the Tibet border.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Mountain highway Surkhet–Jumla; rough stretches, ongoing widening works.",
+    "typical_time": null,
+    "monsoon_risk": "High — repeated monsoon obstructions.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Gaganekhola (Shubha Kalika-1, Kalikot): repeat landslide chokepoint stranding Jumla-bound vehicles.",
+     "Kalekhola (Kalikot): road collapse has fully halted the Surkhet–Jumla section before.",
+     "Travel only after checking the latest condition with traffic police / road division."
+    ],
+    "sources": [
+     {
+      "name": "Artha Khabar",
+      "url": "https://arthakhabar.com/en/2026/09/08/99523/"
+     },
+     {
+      "name": "ShareSansar",
+      "url": "https://www.sharesansar.com/newsdetail/surkhet-jumla-road-blocked-after-road-collapse-at-kalekhola-kalikot-2025-08-27"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh59",
+   "ref": "NH59",
+   "name": "Murtiya–Nagma",
+   "from_place": "murtiya",
+   "to_place": "nagma",
+   "via_places": [
+    "gulariya",
+    "surkhet"
+   ],
+   "from": "Murtiya (IB)",
+   "to": "Nagma",
+   "via": "Gulariya, Surkhet",
+   "segments": [
+    {
+     "id": "nh59-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh60",
+   "ref": "NH60",
+   "name": "Surkhet–Nakchelagna",
+   "from_place": "surkhet",
+   "to_place": "nakchelagna",
+   "via_places": [
+    "dailekh",
+    "gamgadhi"
+   ],
+   "from": "Surkhet",
+   "to": "Nakchelagna",
+   "via": "Dailekh, Gamgadhi",
+   "segments": [
+    {
+     "id": "nh60-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh61",
+   "ref": "NH61",
+   "name": "Surkhet–Jumla",
+   "from_place": "surkhet",
+   "to_place": "jumla",
+   "via_places": [
+    "dullu"
+   ],
+   "from": "Surkhet",
+   "to": "Jumla",
+   "via": "Dullu",
+   "segments": [
+    {
+     "id": "nh61-surkhet-dullu",
+     "name": "Surkhet – Dullu",
+     "expect": "Hill road.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh61-tadi",
+     "name": "Tadi (Kalikot)",
+     "expect": "Live DoR record: landslide — loader mobilized, reopened Oct 1, 2026.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "nh61-tadi-jumla",
+     "name": "Tadi – Jumla",
+     "expect": "Remote stretch onward.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Remote mountain road.",
+    "typical_time": null,
+    "monsoon_risk": "High.",
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [
+     "Live DoR record: landslide at Tadi, Kalikot (NH61-003) — loader mobilized, reopened Oct 1, 2026."
+    ],
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh62",
+   "ref": "NH62",
+   "name": "Khakraula–Chainpur",
+   "from_place": "khakraula",
+   "to_place": "bajhang",
+   "via_places": [
+    "tikapur",
+    "saphebagar"
+   ],
+   "from": "Khakraula",
+   "to": "Bajhang (Chainpur)",
+   "via": "Tikapur, Saphebagar",
+   "segments": [
+    {
+     "id": "nh62-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh63",
+   "ref": "NH63",
+   "name": "Saphebagar–Martadi–Kolti",
+   "from_place": "saphebagar",
+   "to_place": "kolti",
+   "via_places": [
+    "martadi"
+   ],
+   "from": "Saphebagar",
+   "to": "Kolti",
+   "via": "Martadi",
+   "segments": [
+    {
+     "id": "nh63-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh64",
+   "ref": "NH64",
+   "name": "Khodpe–Chainpur (Bajhang)",
+   "from_place": "khodpe",
+   "to_place": "bajhang",
+   "via_places": [],
+   "from": "Khodpe",
+   "to": "Bajhang (Chainpur)",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh64-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh65",
+   "ref": "NH65",
+   "name": "Khuttiya–Uraibhanjyang",
+   "from_place": "khuttiya",
+   "to_place": "uraibhanjyang",
+   "via_places": [
+    "dipayal"
+   ],
+   "from": "Khuttiya",
+   "to": "Uraibhanjyang",
+   "via": "Dipayal",
+   "segments": [
+    {
+     "id": "nh65-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh66",
+   "ref": "NH66",
+   "name": "Dhangadhi–Tinkar",
+   "from_place": "dhangadhi",
+   "to_place": "tinkar",
+   "via_places": [
+    "dipayal",
+    "darchula"
+   ],
+   "from": "Dhangadhi",
+   "to": "Tinkar",
+   "via": "Dipayal, Darchula",
+   "segments": [
+    {
+     "id": "nh66-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh67",
+   "ref": "NH67",
+   "name": "Chandani–Jhulaghat",
+   "from_place": "chandani",
+   "to_place": "jhulaghat",
+   "via_places": [
+    "bhimdatta",
+    "pancheshwar"
+   ],
+   "from": "Chandani",
+   "to": "Jhulaghat",
+   "via": "Bhimdatta, Pancheshwar",
+   "segments": [
+    {
+     "id": "nh67-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh68",
+   "ref": "NH68",
+   "name": "Bhimad–Arung Khola",
+   "from_place": "bhimad",
+   "to_place": "arungkhola",
+   "via_places": [],
+   "from": "Bhimad",
+   "to": "Arung Khola",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh68-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh69",
+   "ref": "NH69",
+   "name": "Jagat Bhanjyang–Syangja",
+   "from_place": "jagatbhanjyang",
+   "to_place": "syangja",
+   "via_places": [
+    "chapakot"
+   ],
+   "from": "Jagat Bhanjyang",
+   "to": "Syangja",
+   "via": "Chapakot",
+   "segments": [
+    {
+     "id": "nh69-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh70",
+   "ref": "NH70",
+   "name": "Seti Dovan–Syangja",
+   "from_place": "setidovan",
+   "to_place": "syangja",
+   "via_places": [],
+   "from": "Seti Dovan",
+   "to": "Syangja",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh70-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh71",
+   "ref": "NH71",
+   "name": "Bhaluwang–Kharwang",
+   "from_place": "bhalubang",
+   "to_place": "kharwang",
+   "via_places": [],
+   "from": "Bhalubang",
+   "to": "Kharwang",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh71-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh72",
+   "ref": "NH72",
+   "name": "Dumkibas–Triveni",
+   "from_place": "dumkibas",
+   "to_place": "triveni",
+   "via_places": [],
+   "from": "Dumkibas",
+   "to": "Triveni",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh72-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh73",
+   "ref": "NH73",
+   "name": "Surunga–Lasunganj (Jhapa)",
+   "from_place": "surunga",
+   "to_place": "lasunganj",
+   "via_places": [],
+   "from": "Surunga",
+   "to": "Lasunganj",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh73-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh74",
+   "ref": "NH74",
+   "name": "Ilam–Sandakpur",
+   "from_place": "ilas",
+   "to_place": "sandakpur",
+   "via_places": [
+    "maipokhari"
+   ],
+   "from": "Ilam",
+   "to": "Sandakpur",
+   "via": "Maipokhari",
+   "segments": [
+    {
+     "id": "nh74-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh75",
+   "ref": "NH75",
+   "name": "Sworna Sagarmatha Ringroad",
+   "from_place": "okhaldhunga",
+   "to_place": "okhaldhunga",
+   "via_places": [
+    "solu",
+    "salleri",
+    "khotang",
+    "diktel"
+   ],
+   "from": "Okhaldhunga",
+   "to": "Okhaldhunga",
+   "via": "Solu, Salleri, Khotang, Diktel",
+   "segments": [
+    {
+     "id": "nh75-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh76",
+   "ref": "NH76",
+   "name": "Damak–Chisapani–Rabi",
+   "from_place": "damak",
+   "to_place": "rabi",
+   "via_places": [],
+   "from": "Damak",
+   "to": "Rabi",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh76-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh77",
+   "ref": "NH77",
+   "name": "Bharatpur Chakrapath",
+   "from_place": "bharatpur",
+   "to_place": "bharatpur",
+   "via_places": [],
+   "from": "Bharatpur",
+   "to": "Bharatpur",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh77-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh78",
+   "ref": "NH78",
+   "name": "Damak Chakrapath",
+   "from_place": "damak",
+   "to_place": "damak",
+   "via_places": [],
+   "from": "Damak",
+   "to": "Damak",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh78-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh79",
+   "ref": "NH79",
+   "name": "Godar–Dudhauli (Dhanusha–Sindhuli)",
+   "from_place": "godar",
+   "to_place": "sindhuli",
+   "via_places": [
+    "dudhauli"
+   ],
+   "from": "Godar",
+   "to": "Sindhuli (Sindhulimadi)",
+   "via": "Dudhauli",
+   "segments": [
+    {
+     "id": "nh79-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "nh80",
+   "ref": "NH80",
+   "name": "Bastipurchowk–Katari (Siraha–Udayapur)",
+   "from_place": "bastipurchowk",
+   "to_place": "katari",
+   "via_places": [],
+   "from": "Bastipurchowk (Siraha)",
+   "to": "Katari",
+   "via": "",
+   "segments": [
+    {
+     "id": "nh80-all",
+     "name": "Entire highway",
+     "expect": "Status comes from the live DoR feed for this highway.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": false,
+    "surface": null,
+    "typical_time": null,
+    "monsoon_risk": null,
+    "night_rules": null,
+    "vehicle_limits": null,
+    "hazards": [],
+    "note": "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.",
+    "sources": [
+     {
+      "name": "DoR NAVIGATE",
+      "url": "https://navigate.dor.gov.np"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pharping",
+   "ref": null,
+   "name": "Pharping–Kulekhani–Bhimphedi",
+   "name_np": "फर्पिङ–कुलेखानी–भिमफेदी",
+   "from_place": "pharping",
+   "to_place": "hetauda",
+   "via_places": [
+    "kulekhani",
+    "bhimphedi"
+   ],
+   "from": "Pharping",
+   "to": "Hetauda",
+   "via": "Kulekhani, Bhimphedi",
+   "segments": [
+    {
+     "id": "pharping-pharping-phakhel",
+     "name": "Pharping – Phakhel",
+     "expect": "One-way system: Kathmandu → Hetauda uses this direction.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "pharping-phakhel-kulekhani",
+     "name": "Phakhel – Kulekhani",
+     "expect": "Light vehicles only; night movement suspended.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    },
+    {
+     "id": "pharping-kulekhani-bhimphedi",
+     "name": "Kulekhani – Bhimphedi (Sisneri)",
+     "expect": "Slide-prone at Sisneri; light vehicles only under the one-way system.",
+     "status": "UNKNOWN",
+     "cause": "",
+     "note": "",
+     "vehicle_limit": "",
+     "updated_at": "2026-10-07T16:09:02+05:45",
+     "source_name": "DoR NAVIGATE",
+     "source_url": "https://navigate.dor.gov.np",
+     "confidence": "official"
+    }
+   ],
+   "travel_notes": {
+    "verified": true,
+    "surface": "Narrow mountain road via Phakhel and Kulekhani; scenic but slow.",
+    "typical_time": "Kathmandu–Hetauda normally ≈ 3 hrs; ≈ 5 hrs under current diversions and jams.",
+    "monsoon_risk": "Moderate — Sisneri stretch is slide-prone.",
+    "night_rules": "Night movement suspended on the Kulekhani section.",
+    "vehicle_limits": "Light vehicles only (< 14 seats). Larger cargo trucks cannot use this road.",
+    "hazards": [
+     "One-way system in force: Kathmandu → Hetauda via Pharping–Phakhel–Kulekhani–Bhimphedi; return via Bhimphedi–Kulekhani–Sisneri–Dakshinkali.",
+     "Sisneri: landslide-prone — a slide at Thingdanda has closed the Kulekhani–Pharping section before."
+    ],
+    "sources": [
+     {
+      "name": "Rising Nepal Daily",
+      "url": "https://risingnepaldaily.com/news/69255"
+     },
+     {
+      "name": "OnlineKhabar",
+      "url": "https://english.onlinekhabar.com/landslides-kathmandus-key-highways.html"
+     }
+    ]
+   }
+  }
+ ]
+}

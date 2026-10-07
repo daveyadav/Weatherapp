@@ -1,9 +1,13 @@
-/* Bato Update — Nepal road status PWA (v1)
+/* Bato Update — Nepal road status PWA (v2)
  * Single rename point for the app name: APP_NAME below (+ manifest.json,
  * sw.js cache name is versioned separately).
+ *
+ * v2: full national coverage (79 NH refs + Pharping alternative, from the
+ * authoritative DoR NAVIGATE road list), journey-timeline trip view, and a
+ * route graph so From -> To works across multiple corridors.
  */
 const APP_NAME = "Bato Update";
-const APP_VERSION = "v1 • 2026-10-07";
+const APP_VERSION = "v2 • 2026-10-07";
 
 const STATUS_META = {
   OPEN:    { label: "Open",    np: "खुला",    cls: "open" },
@@ -14,12 +18,14 @@ const STATUS_META = {
 };
 /* Worst-first order for deriving a corridor verdict from its segments. */
 const SEVERITY = { CLOSED: 4, UNKNOWN: 3, PARTIAL: 2, ONE_WAY: 1, OPEN: 0 };
-/* Freshness thresholds (ms). Older than STALE_MS => "possibly outdated", never green. */
-const AGING_MS = 2 * 3600 * 1000;
+/* Freshness: older than STALE_MS => "possibly outdated", never green. */
 const STALE_MS = 24 * 3600 * 1000;
 
-let DATA = null;   // routes.json content (after NAVIGATE merge)
+let DATA = null;   // corridors.json content (after NAVIGATE merge)
 let FEED = { ok: false, live: false, fetchedAt: null, count: 0 };
+let GRAPH = null;  // place -> [{place, corridor}]
+let HOME_FILTER = "all";
+let HOME_QUERY = "";
 
 /* ---------- helpers ---------- */
 
@@ -49,10 +55,6 @@ function ageLabel(iso) {
 function isStale(iso) {
   return ageMs(iso) > STALE_MS;
 }
-function isAging(iso) {
-  const ms = ageMs(iso);
-  return ms > AGING_MS && ms <= STALE_MS;
-}
 
 /* A stale status is displayed as UNKNOWN-grey ("possibly outdated") — never green. */
 function displayStatus(seg) {
@@ -62,7 +64,8 @@ function displayStatus(seg) {
 function chip(status, extra) {
   const st = displayStatus({ status, updated_at: extra && extra.updated_at });
   const meta = STATUS_META[st] || STATUS_META.UNKNOWN;
-  const staleNote = extra && isStale(extra.updated_at) ? " · possibly outdated" : "";
+  const staleNote =
+    extra && isStale(extra.updated_at) ? " · possibly outdated" : "";
   return `<span class="chip chip-${meta.cls}${extra && isStale(extra.updated_at) ? " chip-stale" : ""}">${meta.label} <span class="np">${meta.np}</span>${staleNote}</span>`;
 }
 
@@ -86,15 +89,19 @@ function placeName(id) {
   const p = DATA.places.find((p) => p.id === id);
   return p ? p.name : id;
 }
+function freshestSeg(c) {
+  return c.segments.reduce((a, s) =>
+    ageMs(s.updated_at) < ageMs(a.updated_at) ? s : a
+  );
+}
 
 /* ---------- data loading ---------- */
 
 async function loadData() {
-  const res = await fetch("data/routes.json", { cache: "no-store" });
-  if (!res.ok) throw new Error("routes.json not found");
+  const res = await fetch("data/corridors.json", { cache: "no-store" });
+  if (!res.ok) throw new Error("corridors.json not found");
   const raw = await res.json();
   let corridors = raw.corridors;
-  // Try the live DoR feed (throttled + cached inside getNavigateRecords).
   try {
     const nav = await getNavigateRecords();
     const merged = mergeNavigateIntoCorridors(corridors, nav);
@@ -104,6 +111,7 @@ async function loadData() {
     FEED = { ok: false, live: false, fetchedAt: null, count: 0 };
   }
   DATA = { ...raw, corridors };
+  GRAPH = buildGraph(corridors);
 }
 
 function feedBanner() {
@@ -114,31 +122,180 @@ function feedBanner() {
   if (FEED.fetchedAt) {
     return `<div class="alert">🟠 Live feed unreachable — showing last-known data (fetched ${esc(ageLabel(FEED.fetchedAt))})</div>`;
   }
-  return `<div class="alert">🟠 Live DoR feed unreachable — showing seed data from 2026-10-06/07. Check source links before you travel.</div>`;
+  return `<div class="alert">🟠 Live DoR feed unreachable — showing seed data. Check source links before you travel.</div>`;
+}
+
+/* ---------- route graph ---------- */
+/* Each corridor is a chain: from_place -> via_places... -> to_place.
+ * Edges are bidirectional; BFS finds multi-corridor trips. */
+function buildGraph(corridors) {
+  const g = {};
+  const add = (a, b, corridor) => {
+    if (!a || !b || a === b) return;
+    (g[a] = g[a] || []).push({ place: b, corridor });
+    (g[b] = g[b] || []).push({ place: a, corridor });
+  };
+  corridors.forEach((c) => {
+    const chain = [c.from_place, ...(c.via_places || []), c.to_place];
+    for (let i = 0; i + 1 < chain.length; i++) add(chain[i], chain[i + 1], c.id);
+  });
+  return g;
+}
+
+/* BFS, up to 3 distinct shortest paths, max `maxLegs` corridors.
+ * A corridor may continue through several places (legs collapse consecutive
+ * duplicates); places are never revisited, so there are no cycles. */
+function findPaths(fromId, toId, maxLegs) {
+  maxLegs = maxLegs || 4;
+  const paths = [];
+  const seenPaths = new Set();
+  const seenState = new Set();
+  const queue = [{ place: fromId, legs: [], visited: new Set([fromId]) }];
+  while (queue.length && paths.length < 3) {
+    const cur = queue.shift();
+    if (cur.place === toId && cur.legs.length > 0) {
+      const key = cur.legs.join(">");
+      if (!seenPaths.has(key)) {
+        seenPaths.add(key);
+        paths.push(cur.legs.slice());
+      }
+      continue;
+    }
+    (GRAPH[cur.place] || []).forEach((e) => {
+      if (cur.visited.has(e.place)) return; // no cycles
+      const legs = cur.legs.slice();
+      if (legs[legs.length - 1] !== e.corridor) legs.push(e.corridor);
+      if (legs.length > maxLegs) return;
+      const skey = e.place + "|" + legs.join(">");
+      if (seenState.has(skey)) return;
+      seenState.add(skey);
+      queue.push({
+        place: e.place,
+        legs,
+        visited: new Set([...cur.visited, e.place]),
+      });
+    });
+  }
+  return paths;
+}
+
+/* ---------- shared render pieces ---------- */
+
+/* One journey-timeline node: what the traveler faces at this segment. */
+function timelineNode(seg, corridor) {
+  const ds = displayStatus(seg);
+  const tn = corridor.travel_notes || {};
+  let expect = seg.expect || "";
+  const liveBits = [];
+  if (seg.note) liveBits.push(esc(seg.note));
+  if (seg.vehicle_limit) liveBits.push("🚧 " + esc(seg.vehicle_limit));
+  return `<div class="tnode st-${ds.toLowerCase()}">
+    <div class="tnode-head">
+      <div><div class="tnode-name">${esc(seg.name)}</div>
+      <div class="tnode-corridor">${corridor.ref ? esc(corridor.ref) + " · " : ""}${esc(corridor.name)}</div></div>
+      ${chip(seg.status, seg)}
+    </div>
+    ${expect ? `<div class="tnode-expect"><span class="lbl">What to expect</span>${esc(expect)}</div>` : ""}
+    ${liveBits.length ? `<div class="tnode-live">${liveBits.join("<br>")}</div>` : ""}
+    ${tn.night_rules ? `<div class="tnode-meta">🌙 ${esc(tn.night_rules)}</div>` : ""}
+    <div class="tnode-meta">Updated ${esc(ageLabel(seg.updated_at))}${isStale(seg.updated_at) ? " — <b>possibly outdated</b>" : ""} · ${esc(seg.source_name || "")}</div>
+  </div>`;
+}
+
+function corridorLegLabel(corridor) {
+  return `<div class="tleg">continues on <b>${corridor.ref ? esc(corridor.ref) + " · " : ""}${esc(corridor.name)}</b></div>`;
+}
+
+function tripTimelineHTML(legs) {
+  let html = '<div class="timeline">';
+  let prevCorridor = null;
+  legs.forEach((cid) => {
+    const c = corridorById(cid);
+    if (!c) return;
+    if (prevCorridor && prevCorridor !== cid) html += corridorLegLabel(c);
+    prevCorridor = cid;
+    c.segments.forEach((s) => {
+      html += timelineNode(s, c);
+    });
+  });
+  return html + "</div>";
+}
+
+function verdictForLegs(legs) {
+  let worst = "OPEN",
+    decider = null,
+    deciderCorridor = null;
+  legs.forEach((cid) => {
+    const c = corridorById(cid);
+    if (!c) return;
+    const v = corridorVerdict(c);
+    if (SEVERITY[v.status] > SEVERITY[worst]) {
+      worst = v.status;
+      decider = v.decider;
+      deciderCorridor = c;
+    }
+  });
+  return { status: worst, decider, deciderCorridor };
 }
 
 /* ---------- views ---------- */
 
-function viewHome() {
-  const cards = DATA.corridors
+function filteredCorridors() {
+  const q = HOME_QUERY.trim().toLowerCase();
+  return DATA.corridors
+    .filter((c) => {
+      const v = corridorVerdict(c);
+      if (HOME_FILTER === "alerts" && v.status === "OPEN") return false;
+      if (HOME_FILTER === "open" && v.status !== "OPEN") return false;
+      if (!q) return true;
+      const hay = [c.name, c.ref, c.from, c.to, c.via, c.name_np]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return hay.includes(q);
+    })
+    .sort((a, b) => {
+      const sa = SEVERITY[corridorVerdict(a).status];
+      const sb = SEVERITY[corridorVerdict(b).status];
+      return sb - sa || a.name.localeCompare(b.name);
+    });
+}
+
+function homeListHTML() {
+  const list = filteredCorridors();
+  const cards = list
     .map((c) => {
       const v = corridorVerdict(c);
-      const freshest = c.segments.reduce((a, s) =>
-        ageMs(s.updated_at) < ageMs(a.updated_at) ? s : a
-      );
+      const f = freshestSeg(c);
       return `<a class="card card-link" href="#/c/${c.id}">
         <div class="corridor-head">
-          <div><span class="corridor-name">${esc(c.name)}</span>${c.code ? `<span class="corridor-code">${esc(c.code)}</span>` : ""}</div>
-          ${chip(v.status, { updated_at: freshest.updated_at })}
+          <div><span class="corridor-name">${esc(c.name)}</span>${c.ref ? `<span class="corridor-code">${esc(c.ref)}</span>` : ""}</div>
+          ${chip(v.status, { updated_at: f.updated_at })}
         </div>
         <div class="corridor-route">${esc(c.from)} → ${esc(c.to)}${c.via ? " via " + esc(c.via) : ""}</div>
         ${v.decider && v.status !== "OPEN" ? `<div class="decider">⚠️ ${esc(v.decider.name)} — ${(STATUS_META[v.status] || STATUS_META.UNKNOWN).label.toLowerCase()}</div>` : ""}
-        <div class="meta">Updated ${esc(ageLabel(freshest.updated_at))} · ${c.segments.length} segments</div>
+        <div class="meta">Updated ${esc(ageLabel(f.updated_at))} · ${c.segments.length} segment${c.segments.length === 1 ? "" : "s"}</div>
       </a>`;
     })
     .join("");
-  return `${feedBanner()}<h2>Road status — all corridors</h2>${cards}
-    <p class="note">Statuses older than 24 hours are shown grey as <b>possibly outdated</b>, never green. Tap a corridor for segment-by-segment detail.</p>`;
+  return `<p class="count-line">${list.length} of ${DATA.corridors.length} highways · worst-affected first</p>
+  ${cards || `<div class="card"><p class="note">No highways match “${esc(HOME_QUERY)}”.</p></div>`}`;
+}
+
+function viewHome() {
+  const alertCount = DATA.corridors.filter(
+    (c) => corridorVerdict(c).status !== "OPEN"
+  ).length;
+  return `${feedBanner()}
+  <h2>🇳🇵 Nepal road status</h2>
+  <input id="q" class="searchbar" type="search" placeholder="Search highway, code (NH17), or place…" value="${esc(HOME_QUERY)}" aria-label="Search corridors" autocomplete="off">
+  <div class="fchips">
+    <button class="fchip${HOME_FILTER === "all" ? " active" : ""}" data-f="all">All</button>
+    <button class="fchip${HOME_FILTER === "alerts" ? " active" : ""}" data-f="alerts">⚠️ With alerts (${alertCount})</button>
+    <button class="fchip${HOME_FILTER === "open" ? " active" : ""}" data-f="open">✅ Open now</button>
+  </div>
+  <div id="home-list">${homeListHTML()}</div>
+  <p class="note">Statuses older than 24 hours are shown grey as <b>possibly outdated</b>, never green. Tap a highway for segment detail and travel notes.</p>`;
 }
 
 function viewTrip() {
@@ -156,69 +313,104 @@ function viewTrip() {
   <div id="trip-result"></div>`;
 }
 
-function verdictForCorridors(ids) {
-  let worst = "OPEN",
-    decider = null,
-    deciderCorridor = null;
-  ids.forEach((id) => {
-    const c = corridorById(id);
-    if (!c) return;
-    const v = corridorVerdict(c);
-    if (SEVERITY[v.status] > SEVERITY[worst]) {
-      worst = v.status;
-      decider = v.decider;
-      deciderCorridor = c;
-    }
-  });
-  return { status: worst, decider, deciderCorridor };
-}
-
 function renderTripResult(from, to) {
   const box = document.getElementById("trip-result");
   if (from === to) {
     box.innerHTML = `<div class="alert">Pick two different places.</div>`;
     return;
   }
-  const trip = DATA.trips.find((t) => t.from === from && t.to === to);
-  if (!trip) {
-    box.innerHTML = `<div class="alert">No tracked route for ${esc(placeName(from))} → ${esc(placeName(to))} in v1. Try the corridor list on Home.</div>`;
+  const paths = findPaths(from, to);
+  if (!paths.length) {
+    box.innerHTML = `<div class="alert">No connected route found for ${esc(placeName(from))} → ${esc(placeName(to))} on the tracked highway network. Try nearby towns.</div>`;
     return;
   }
-  box.innerHTML = `<h3>${esc(placeName(from))} → ${esc(placeName(to))}</h3>` +
-    trip.options
-      .map((o) => {
-        const v = verdictForCorridors(o.corridors);
-        const names = o.corridors
-          .map((id) => { const c = corridorById(id); return c ? c.name : id; })
-          .join(" + ");
-        const dots = o.corridors
-          .map((id) => {
-            const c = corridorById(id);
-            if (!c) return "";
-            return c.segments.map((s) => `<span class="seg-dot seg-dot-${displayStatus(s)}" title="${esc(s.name)}"></span>`).join("");
+  box.innerHTML =
+    `<h3>${esc(placeName(from))} → ${esc(placeName(to))}</h3>` +
+    paths
+      .map((legs, i) => {
+        const v = verdictForLegs(legs);
+        const names = legs
+          .map((cid) => {
+            const c = corridorById(cid);
+            return c ? (c.ref ? c.ref + " " : "") + c.name : cid;
           })
-          .join("");
-        return `<div class="trip-opt">
-          <div class="verdict"><span class="opt-label">${esc(o.label)}</span>${chip(v.status, v.decider || { updated_at: new Date().toISOString() })}</div>
+          .join(" → ");
+        const segCount = legs.reduce(
+          (n, cid) => n + ((corridorById(cid) || { segments: [] }).segments.length),
+          0
+        );
+        return `<div class="card trip-opt">
+          <div class="verdict"><span class="opt-label">Option ${i + 1}</span>${chip(v.status, v.decider || { updated_at: new Date().toISOString() })}</div>
           <div class="small">${esc(names)}</div>
-          <div class="seg-strip">${dots}</div>
-          ${v.decider ? `<div class="decider">⚠️ Deciding segment: <b>${esc(v.decider.name)}</b>${v.deciderCorridor ? " (" + esc(v.deciderCorridor.name) + ")" : ""}<br>${esc(v.decider.note || "")}</div>` : `<div class="decider">✅ All segments open on this option.</div>`}
-          ${o.note ? `<div class="opt-note">${esc(o.note)}</div>` : ""}
+          <div class="small">${segCount} segments on this journey</div>
+          ${v.decider ? `<div class="decider">⚠️ Watch out: <b>${esc(v.decider.name)}</b>${v.deciderCorridor ? " (" + esc(v.deciderCorridor.name) + ")" : ""}</div>` : `<div class="decider">✅ No reported problems on this option.</div>`}
+          <h3>Journey timeline</h3>
+          ${tripTimelineHTML(legs)}
         </div>`;
       })
       .join("");
 }
 
+function travelNotesHTML(c) {
+  const tn = c.travel_notes || {};
+  if (!tn.verified) {
+    return `<div class="card"><h3 style="margin-top:0">🧳 What to expect</h3>
+      <p class="unverified-note">${esc(tn.note || "Not yet researched in detail — live status comes from the DoR feed. Check with local traffic police before travelling.")}</p></div>`;
+  }
+  const row = (lbl, val) =>
+    val ? `<dt>${lbl}</dt><dd>${esc(val)}</dd>` : "";
+  const hazards =
+    tn.hazards && tn.hazards.length
+      ? `<dt>Known hazards</dt><dd><ul>${tn.hazards.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></dd>`
+      : "";
+  const src =
+    tn.sources && tn.sources.length
+      ? `<div class="source">Research sources: ${tn.sources.map((s) => (s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name))).join(" · ")}</div>`
+      : "";
+  return `<div class="card"><h3 style="margin-top:0">🧳 What to expect on this road</h3>
+    <dl class="tnotes">
+      ${row("Road surface", tn.surface)}
+      ${row("Typical time", tn.typical_time)}
+      ${row("Monsoon behaviour", tn.monsoon_risk)}
+      ${row("Night rules", tn.night_rules)}
+      ${row("Vehicle limits", tn.vehicle_limits)}
+      ${hazards}
+    </dl>${src}</div>`;
+}
+
+function liveRecordsHTML(c) {
+  const recs = (c._liveRecords || []).filter((r) => r.status !== "OPEN");
+  const opened = (c._liveRecords || []).filter((r) => r.status === "OPEN");
+  if (!recs.length && !opened.length) {
+    return `<div class="card"><h3 style="margin-top:0">📡 Live DoR records</h3>
+      <p class="note">No closure records on the live DoR feed for this highway${FEED.fetchedAt ? " (fetched " + esc(ageLabel(FEED.fetchedAt)) + ")" : ""}.</p></div>`;
+  }
+  const item = (r) => `<div class="lrec">
+      <div class="lr-head"><span class="lr-name">${esc(r.road_name || r.location || r.link_code)}</span>${chip(r.status, { updated_at: FEED.fetchedAt })}</div>
+      ${r.reason ? `<div>Reason: ${esc(r.reason)}</div>` : ""}
+      ${r.location ? `<div class="small">📍 ${esc(r.location)}${r.chainage ? " · chainage " + esc(r.chainage) : ""}</div>` : ""}
+      ${r.repair_eta ? `<div class="small">⏱️ Repair ETA: ${esc(r.repair_eta)}</div>` : ""}
+      ${r.efforts ? `<div class="small">Efforts: ${esc(r.efforts)}</div>` : ""}
+      ${r.closed_since ? `<div class="small">Blocked since: ${esc(r.closed_since)}</div>` : ""}
+      <div class="source">DoR NAVIGATE · <a href="https://navigate.dor.gov.np" target="_blank" rel="noopener">navigate.dor.gov.np</a></div>
+    </div>`;
+  return `<div class="card"><h3 style="margin-top:0">📡 Live DoR records</h3>
+    ${recs.map(item).join("")}
+    ${opened.length ? `<h3>Cleared</h3>${opened.map(item).join("")}` : ""}</div>`;
+}
+
 function viewCorridor(id) {
   const c = corridorById(id);
-  if (!c) return `<div class="center">Corridor not found. <a href="#/">Back home</a></div>`;
+  if (!c)
+    return `<div class="center">Highway not found. <a href="#/">Back home</a></div>`;
   const v = corridorVerdict(c);
+  const f = freshestSeg(c);
   const segs = c.segments
     .map((s) => {
       const ds = displayStatus(s);
-      const meta = STATUS_META[ds];
       return `<div class="seg">
         <div class="seg-top"><span class="seg-name">${esc(s.name)}</span>${chip(s.status, s)}</div>
+        ${s.expect && s.expect !== "Status comes from the live DoR feed for this highway." ? `<div class="seg-note">${esc(s.expect)}</div>` : ""}
         ${s.cause ? `<div class="seg-note"><b>Cause:</b> ${esc(s.cause)}</div>` : ""}
         ${s.note ? `<div class="seg-note">${esc(s.note)}</div>` : ""}
         ${s.vehicle_limit ? `<span class="vlimit">🚧 ${esc(s.vehicle_limit)}</span>` : ""}
@@ -228,39 +420,41 @@ function viewCorridor(id) {
     })
     .join("");
   return `${feedBanner()}
-  <p><a href="#/">← All corridors</a></p>
+  <p><a href="#/">← All highways</a></p>
   <div class="card">
     <div class="corridor-head">
-      <div><span class="corridor-name">${esc(c.name)}</span>${c.code ? `<span class="corridor-code">${esc(c.code)}</span>` : ""}</div>
-      ${chip(v.status, v.decider || { updated_at: new Date().toISOString() })}
+      <div><span class="corridor-name">${esc(c.name)}</span>${c.ref ? `<span class="corridor-code">${esc(c.ref)}</span>` : ""}${c.name_np ? `<div class="small">${esc(c.name_np)}</div>` : ""}</div>
+      ${chip(v.status, { updated_at: f.updated_at })}
     </div>
     <div class="corridor-route">${esc(c.from)} → ${esc(c.to)}${c.via ? " via " + esc(c.via) : ""}</div>
   </div>
+  ${travelNotesHTML(c)}
   <h3>Segments</h3>
-  <div class="card">${segs}</div>`;
+  <div class="card">${segs}</div>
+  ${liveRecordsHTML(c)}`;
 }
 
 function viewAbout() {
   return `<h2>About ${esc(APP_NAME)}</h2>
   <div class="card">
-    <p><b>${esc(APP_NAME)}</b> answers one question: <i>is the road open?</i> — for Nepal's highways, segment by segment, with the reason, when it was last confirmed, and the source.</p>
-    <p style="margin-top:8px">A highway is never just "closed". A <b>segment</b> is — one bridge, one landslide-prone bend. The corridor verdict is decided by its worst segment, and you always see which one.</p>
+    <p><b>${esc(APP_NAME)}</b> answers one question: <i>is the road open?</i> — for every national highway of Nepal (NH01–NH80), segment by segment, with what you will actually face on the way: the reason, when it was last confirmed, and the source.</p>
+    <p style="margin-top:8px">A highway is never just "closed". A <b>segment</b> is — one bridge, one landslide-prone bend. The highway verdict is decided by its worst segment, and you always see which one. The <b>journey timeline</b> on the Trip tab lays out the whole trip as a story, not a dot.</p>
   </div>
   <h3>Data sources</h3>
   <div class="card"><ul class="clean">
-    <li>🟢 <b>DoR NAVIGATE</b> (navigate.dor.gov.np) — official per-section closures, live feed</li>
+    <li>🟢 <b>DoR NAVIGATE</b> (navigate.dor.gov.np) — official per-section closures, live feed every 15 min</li>
     <li>🚔 <b>Nepal Traffic Police</b> — holds, releases, one-way rulings</li>
-    <li>📰 <b>News</b> (Rising Nepal Daily, OnlineKhabar, Khabarhub…) — backup for events the official feed lags on</li>
-    <li>🌧️ <b>DHM</b> weather — risk context only, never shown as a closure</li>
+    <li>📰 <b>News</b> (Rising Nepal Daily, OnlineKhabar, Khabarhub, The Himalayan Times, Ratopati…) — backup for events the official feed lags on</li>
+    <li>🧳 <b>Travel notes</b> — researched per corridor (landslide chokepoints, night rules, vehicle limits); unresearched roads say so openly</li>
   </ul></div>
   <h3>Trust rules</h3>
   <div class="card"><ul class="clean">
     <li>Every status shows its source and confirmed-at time.</li>
     <li>Data older than 24 hours is shown grey as <b>possibly outdated</b> — never a confident green.</li>
     <li>Official sources outrank media; reopenings need the same evidence as closures.</li>
-    <li>v1 seed data is from 2026-10-05/07 news reports — always check the source link before travelling.</li>
+    <li>Always check the source link before travelling — mountain weather changes fast.</li>
   </ul></div>
-  <p class="small">Version ${esc(APP_VERSION)}. Installable: open in your phone browser → Add to Home Screen.</p>`;
+  <p class="small">Version ${esc(APP_VERSION)}. ${DATA.corridors.length} highways · ${DATA.places.length} places. Installable: open in your phone browser → Add to Home Screen.</p>`;
 }
 
 /* ---------- router ---------- */
@@ -293,6 +487,18 @@ function render() {
     view.innerHTML = viewAbout();
   } else {
     view.innerHTML = viewHome();
+    const q = document.getElementById("q");
+    q.addEventListener("input", () => {
+      HOME_QUERY = q.value;
+      const list = document.getElementById("home-list");
+      if (list) list.innerHTML = homeListHTML();
+    });
+    document.querySelectorAll(".fchip").forEach((b) =>
+      b.addEventListener("click", () => {
+        HOME_FILTER = b.getAttribute("data-f");
+        render();
+      })
+    );
   }
   window.scrollTo(0, 0);
 }
@@ -301,9 +507,9 @@ function render() {
 
 function updateOnlineUI() {
   const b = document.getElementById("offline-banner");
-  b.hidden = navigator.onLine !== false;
+  if (b) b.hidden = navigator.onLine !== false;
   const age = document.getElementById("data-age");
-  if (DATA) {
+  if (DATA && age) {
     const newest = DATA.corridors
       .flatMap((c) => c.segments)
       .reduce((a, s) => (ageMs(s.updated_at) < ageMs(a.updated_at) ? s : a));

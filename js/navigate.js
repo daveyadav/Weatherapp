@@ -35,18 +35,20 @@ const NAVIGATE_CONFIG = {
   LS_FETCHED_AT: "bato_navigate_fetched_at",
 };
 
-/* Known road-ref -> corridor mappings for our v1 corridors. */
-const ROAD_REF_TO_CORRIDOR = {
-  NH17: "prithvi",     // Prithvi Highway
-  NH44: "nh44",        // Narayanghat–Mugling road
-  NH13: "bp",          // BP Highway
-  NH37: "kanti",       // Kanti Lokpath
-};
-/* Corridors fully covered by the live feed: no closure record = OPEN. */
-const LIVE_COVERED_REFS = new Set(Object.keys(ROAD_REF_TO_CORRIDOR));
-/* Name-based fallback for corridors without a confirmed NH ref yet. */
+/* Road-ref -> corridor id, built dynamically from the corridor list
+ * (data/corridors.json). Every NH ref in our list is covered by the
+ * national DoR feed: no closure record = OPEN. */
+let ROAD_REF_TO_CORRIDOR = {};
+let LIVE_COVERED_REFS = new Set();
+function buildRefMap(corridors) {
+  ROAD_REF_TO_CORRIDOR = {};
+  (corridors || []).forEach((c) => {
+    if (c.ref) ROAD_REF_TO_CORRIDOR[String(c.ref).toUpperCase()] = c.id;
+  });
+  LIVE_COVERED_REFS = new Set(Object.keys(ROAD_REF_TO_CORRIDOR));
+}
+/* Name-based fallback for corridors without an NH ref (e.g. Pharping). */
 const NAME_TO_CORRIDOR = [
-  { match: ["tribhuvan"], corridor: "tribhuvan" },
   { match: ["pharping", "kulekhani", "phakhel", "sisneri"], corridor: "pharping" },
 ];
 
@@ -156,17 +158,21 @@ async function getNavigateRecords() {
   }
 }
 
-/* Fuzzy match: does this live record describe this segment? */
+/* Fuzzy match: does this live record describe this segment?
+ * Strict mode uses only location / link_code — the record's road_name is
+ * often just the highway name ("Narayanghat-Mugling") which would wrongly
+ * match every segment of the corridor. */
 function recordMatchesSegment(rec, segName) {
-  const seg = segName.toLowerCase();
+  const seg = String(segName || "").toLowerCase();
   const words = (s) =>
     String(s || "")
       .toLowerCase()
       .split(/[^a-z\u0900-\u097F0-9]+/)
       .filter((w) => w.length >= 4);
-  const cands = [rec.location, rec.road_name, rec.link_code].filter(Boolean);
+  const cands = [rec.location, rec.link_code].filter(Boolean);
   return cands.some((c) => {
     const cs = String(c).toLowerCase();
+    if (!cs) return false;
     if (seg.includes(cs) || cs.includes(seg)) return true;
     const cw = words(cs),
       sw = words(seg);
@@ -181,6 +187,7 @@ function recordMatchesSegment(rec, segName) {
  * honest. Corridors without a confirmed NH ref keep seed data unless a record
  * matches them by name. Returns {corridors, feed}. */
 function mergeNavigateIntoCorridors(corridors, nav) {
+  buildRefMap(corridors);
   const feed = {
     ok: false,
     live: !!(nav && nav.live),
@@ -215,15 +222,37 @@ function mergeNavigateIntoCorridors(corridors, nav) {
   });
   const merged = corridors.map((c) => {
     const recs = byCorridor[c.id] || [];
-    const covered = c.code && LIVE_COVERED_REFS.has(c.code);
-    if (!recs.length && !covered) return c; // no live info — keep seed data
-    const segments = c.segments.map((s) => {
-      const hit = recs.find((r) => recordMatchesSegment(r, s.name));
-      if (hit) return liveStatus(s, hit);
-      if (covered) return liveStatus(s, null); // feed covers it, no closure = open
-      return s;
+    const covered = c.ref && LIVE_COVERED_REFS.has(String(c.ref).toUpperCase());
+    const out = { ...c, _liveRecords: recs };
+    if (!recs.length && !covered) return out; // no live info — keep seed data
+    const used = new Set();
+    // Pass 1: strict matching on location / link_code.
+    const assigned = out.segments.map((s) => {
+      const hit = recs.find(
+        (r) => !used.has(r.id) && recordMatchesSegment(r, s.name)
+      );
+      if (hit) used.add(hit.id);
+      return hit || null;
     });
-    return { ...c, segments };
+    // Pass 2: leftover records attach to the first free segment so the
+    // corridor verdict still reflects them; the note keeps the true location.
+    recs
+      .filter((r) => !used.has(r.id))
+      .forEach((r) => {
+        const i = assigned.findIndex((a) => !a);
+        if (i >= 0) {
+          assigned[i] = r;
+          used.add(r.id);
+        }
+      });
+    const segments = out.segments.map((s, i) =>
+      assigned[i]
+        ? liveStatus(s, assigned[i])
+        : covered
+          ? liveStatus(s, null) // feed covers it, no closure = open
+          : s
+    );
+    return { ...out, segments };
   });
   feed.ok = true;
   return { corridors: merged, feed };

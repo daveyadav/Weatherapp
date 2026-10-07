@@ -1,9 +1,9 @@
-/* Bato Update service worker — v1.
- * Cache the app shell + seed data on install. Offline: serve from cache and the
+/* Bato Update service worker — v2.
+ * Cache the app shell + corridor data on install. Offline: serve from cache and the
  * app shows its "offline — showing last-known data" banner. Bump CACHE when the
  * shell changes (keep in sync with APP_VERSION in js/app.js).
  */
-const CACHE = "bato-update-v1";
+const CACHE = "bato-update-v2";
 const SHELL = [
   "./",
   "./index.html",
@@ -11,7 +11,7 @@ const SHELL = [
   "./css/app.css",
   "./js/app.js",
   "./js/navigate.js",
-  "./data/routes.json",
+  "./data/corridors.json",
   "./icons/icon.svg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
@@ -52,8 +52,8 @@ self.addEventListener("fetch", (e) => {
           })
           .catch(() => hit || caches.match("./index.html"));
       }
-      // routes.json: network first (freshness matters), cache on success.
-      if (url.pathname.endsWith("routes.json")) {
+      // corridors.json: network first (freshness matters), cache on success.
+      if (url.pathname.endsWith("corridors.json")) {
         return fetch(e.request)
           .then((res) => {
             const copy = res.clone();
