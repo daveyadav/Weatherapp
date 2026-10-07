@@ -326,7 +326,8 @@ function viewHome() {
 }
 
 function viewTrip() {
-  const opts = DATA.places
+  const opts = [...DATA.places]
+    .sort((a, b) => a.name.localeCompare(b.name))
     .map((p) => `<option value="${p.id}">${esc(p.name)}</option>`)
     .join("");
   return `${feedBanner()}<h2>🧭 Check your trip</h2>

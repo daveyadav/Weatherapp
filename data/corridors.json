@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T16:09:02+05:45",
+ "generated_at": "2026-10-07T17:30:00+05:45",
  "app": "Bato Update v2",
  "road_list_source": "DoR NAVIGATE Metadata_api/getAllRoads (fetched 2026-10-07)",
  "status_key": [
@@ -1002,6 +1002,74 @@
   {
    "id": "wamitaksar",
    "name": "Wamitaksar"
+  },
+  {
+   "id": "birgunj",
+   "name": "Birgunj"
+  },
+  {
+   "id": "inaruwa",
+   "name": "Inaruwa"
+  },
+  {
+   "id": "simara",
+   "name": "Simara"
+  },
+  {
+   "id": "amlekhganj",
+   "name": "Amlekhganj"
+  },
+  {
+   "id": "bhandara",
+   "name": "Bhandara"
+  },
+  {
+   "id": "tandi",
+   "name": "Tandi"
+  },
+  {
+   "id": "gaindakot",
+   "name": "Gaindakot"
+  },
+  {
+   "id": "bardaghat",
+   "name": "Bardaghat"
+  },
+  {
+   "id": "sunwal",
+   "name": "Sunwal"
+  },
+  {
+   "id": "chisapani",
+   "name": "Chisapani"
+  },
+  {
+   "id": "attariya",
+   "name": "Attariya"
+  },
+  {
+   "id": "bhaktapur",
+   "name": "Bhaktapur"
+  },
+  {
+   "id": "banepa",
+   "name": "Banepa"
+  },
+  {
+   "id": "damauli",
+   "name": "Damauli"
+  },
+  {
+   "id": "jiri",
+   "name": "Jiri"
+  },
+  {
+   "id": "melamchi",
+   "name": "Melamchi"
+  },
+  {
+   "id": "jomsom",
+   "name": "Jomsom"
   }
  ],
  "corridors": [
@@ -1013,11 +1081,34 @@
    "from_place": "kakarbhitta",
    "to_place": "gaddachauki",
    "via_places": [
+    "birtamod",
+    "damak",
     "itahari",
+    "inaruwa",
+    "lahan",
+    "mirchaiya",
+    "dhalkebar",
+    "bardibas",
+    "chandranigahpur",
+    "simara",
+    "pathlaiya",
+    "amlekhganj",
+    "hetauda",
+    "bhandara",
+    "tandi",
     "narayanghat",
+    "gaindakot",
+    "kawasoti",
+    "dumkibas",
+    "bardaghat",
+    "sunwal",
     "butwal",
+    "lamahi",
     "kohalpur",
-    "nepalgunj"
+    "chisapani",
+    "nepalgunj",
+    "attariya",
+    "mahendranagar"
    ],
    "from": "Kakarbhitta",
    "to": "Gaddachauki",
@@ -1971,7 +2062,8 @@
    "from_place": "naubise",
    "to_place": "pokhara",
    "via_places": [
-    "muglin"
+    "muglin",
+    "damauli"
    ],
    "from": "Naubise",
    "to": "Pokhara",
@@ -2319,7 +2411,8 @@
    "to_place": "khadichaur",
    "via_places": [
     "salleri",
-    "charikot"
+    "charikot",
+    "jiri"
    ],
    "from": "Diktel",
    "to": "Khadichaur",
@@ -2651,7 +2744,9 @@
    "name": "Dolalghat–Chautara",
    "from_place": "dolalghat",
    "to_place": "chautara",
-   "via_places": [],
+   "via_places": [
+    "melamchi"
+   ],
    "from": "Dolalghat",
    "to": "Chautara",
    "via": "",
@@ -2779,6 +2874,8 @@
    "from_place": "kathmandu",
    "to_place": "kodari",
    "via_places": [
+    "bhaktapur",
+    "banepa",
     "dhulikhel",
     "dolalghat",
     "barabise",
@@ -3146,15 +3243,16 @@
    "ref": "NH41",
    "name": "Tribhuvan Highway (Tribhuvan Rajpath)",
    "name_np": "त्रिभुवन राजपथ",
-   "from_place": "sirsiya",
+   "from_place": "birgunj",
    "to_place": "kathmandu",
    "via_places": [
+    "sirsiya",
     "hetauda",
     "bhimphedi",
     "palung",
     "naubise"
    ],
-   "from": "Sirsiya",
+   "from": "Birgunj",
    "to": "Kathmandu",
    "via": "Hetauda, Bhimphedi, Palung, Naubise",
    "segments": [
@@ -3710,7 +3808,8 @@
    "from_place": "tansen",
    "to_place": "korla",
    "via_places": [
-    "ridi"
+    "ridi",
+    "jomsom"
    ],
    "from": "Tansen",
    "to": "Korla",
